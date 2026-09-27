@@ -595,3 +595,19 @@ h2{font-weight:700}
   .doodle .curve{stroke-dashoffset:0}
   .turn .big{background-size:100% 100%}
 }
+
+/* built-with logos */
+.skill-line{font-size:var(--text-sm);letter-spacing:var(--tracking-label);text-transform:uppercase;font-weight:600;color:var(--champ-300)}
+.logos{list-style:none;display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:-6px}
+.logos li{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:var(--radius-md);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;font-weight:700;font-size:20px;letter-spacing:-0.02em;line-height:1}
+.logos svg{width:28px;height:28px;color:#EA4B71}
+.logo-k2 .k2{font-weight:800}
+.logo-k2 span+span{font-weight:400}
+.logo-k2 small{font-size:11px;font-weight:500;color:var(--navy-300);margin-left:6px;letter-spacing:.02em}
+.proj-dark .also.light{border-left-color:var(--champ-400);color:var(--navy-300)}
+
+/* AI toolkit chips */
+.ai-kit{margin-top:var(--space-8);padding:var(--space-6);border:1px solid var(--navy-200);border-radius:var(--radius-lg);background:var(--champ-50)}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--space-4)}
+.chips li{padding:10px 16px;border-radius:999px;background:var(--navy-900);color:#fff;font-weight:700;font-size:var(--text-sm);letter-spacing:-0.01em}
+.ai-kit .also{margin-top:var(--space-4)}
