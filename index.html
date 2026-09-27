@@ -61,7 +61,7 @@
       <div class="wrap hero2-grid">
         <div class="hero2-copy">
           <p class="eyebrow fade-up">Fahad Tahir · Finance · AI automation · Dubai</p>
-          <h1 id="h1" data-split>Born and raised in Dubai. Ten years making its numbers add up.</h1>
+          <h1 id="h1" data-split>10 years closing the books in Dubai. Now I build the tools that close them faster.</h1>
           <p class="lede fade-up" style="--d:360ms">I closed the books at Canon, ran the audits at Pearl Initiative, and today I keep the cash forecast at LSN Signs. Somewhere along the way I got tired of the slow parts, so I started building the tools I wished someone had handed me.</p>
           <div class="cta fade-up" style="--d:440ms">
             <div class="cv left" data-cv>
@@ -97,7 +97,7 @@
             <path class="ink" d="M120 30h12M148 70h26M252 64h18" opacity=".5"/>
             <circle class="gold" cx="272" cy="26" r="9"/>
           </svg>
-          <span class="stamp" aria-hidden="true"><span>Dubai</span><span>25.20° N</span></span>
+          <span class="stamp" data-weather aria-live="off"><span>Dubai</span><span class="wx">right now</span></span>
         </div>
       </div>
     </section>
@@ -193,13 +193,38 @@
         <div class="sec-head rv" data-view>
           <span class="idx">02</span>
           <h2 id="work-h">What I've built</h2>
-          <p>Three projects, each with its own room. The skill that runs through all of them: taking a finance process I know inside out and rebuilding it with automation and AI, with rules doing the maths and a person pressing the button.</p>
+          <p>Three projects, each with its own room, Nodes first because it is the biggest. The skill that runs through all of them: taking a finance process I know inside out and rebuilding it with automation and AI, with rules doing the maths and a person pressing the button.</p>
         </div>
       </div>
 
-      <!-- Working Capital Agent -->
-      <article class="proj proj-dark" aria-labelledby="p1-h">
+      <!-- Nodes -->
+      <article class="proj proj-gold" aria-labelledby="p1-h">
         <div class="wrap proj-grid">
+          <div class="proj-copy rv" data-view>
+            <div class="proj-meta"><span class="badge b-build"><i></i>In build</span><span class="mono">Flagship · Full reconciliation platform, built with AI</span></div>
+            <h3 id="p1-h">Nodes</h3>
+            <p class="kicker">The problem: every month-end I matched thousands of lines by hand. The answer: I built the system.</p>
+            <p>At Canon and Pearl Initiative, reconciliations ate the first week of every month. ERP, payment provider and bank never agreed, and the fix was a person with a spreadsheet. I knew exactly what a good reconciliation looked like. I just couldn't code it.</p>
+            <p>With AI coding tools I could. Nodes is a working reconciliation platform I specified and built end to end: a deterministic matching engine that does the accounting, a control pack of 18 checks, a review queue where a reviewer signs off every exception, and an AI layer that explains each gap in plain English but never decides. Every decision leaves an audit trail.</p>
+            <ul class="proj-facts">
+              <li>Rules match, not the model</li>
+              <li><b class="num">18</b> controls in the pack</li>
+              <li>AI explains, a reviewer decides</li>
+            </ul>
+            <a class="btn btn-primary" href="https://nodes-finance.vercel.app" target="_blank" rel="noopener">Visit Nodes <span class="ar" aria-hidden="true">↗</span></a>
+          </div>
+          <a class="proj-vis shot rv" data-view style="--d:120ms" href="https://nodes-finance.vercel.app" target="_blank" rel="noopener" aria-label="Open the Nodes landing page in a new tab">
+            <picture>
+              <source type="image/webp" srcset="assets/images/nodes-landing.webp">
+              <img src="assets/images/nodes-landing.jpg" width="1280" height="720" alt="The Nodes landing page. Reconcile the volume. Review the exceptions." loading="lazy" decoding="async">
+            </picture>
+          </a>
+        </div>
+      </article>
+
+      <!-- Working Capital Agent -->
+      <article class="proj proj-dark" aria-labelledby="p2-h">
+        <div class="wrap proj-grid flip">
           <div class="proj-copy rv" data-view>
             <div class="proj-meta"><span class="badge b-hack"><i></i>Hackathon build</span><span class="mono">Dubai · one day</span></div>
             <p class="skill-line">AI automation, built with</p>
@@ -207,7 +232,7 @@
               <li class="logo-n8n"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#n8n-mark"/></svg><span>n8n</span></li>
               <li class="logo-k2"><span class="k2">K2</span><span>Horizon</span><small>by MBZUAI Institute of Foundation Models</small></li>
             </ul>
-            <h3 id="p1-h">Working Capital Agent</h3>
+            <h3 id="p2-h">Working Capital Agent</h3>
             <p class="kicker">A 14 step n8n workflow, with K2 Horizon reasoning over the numbers.</p>
             <p>I designed and wired the whole thing myself in a day: n8n reads the cash movements from four sources, forecasts the next 30 days with fixed rules, then hands the results to K2 Horizon to weigh up the fixes: chase a customer early, or ask a supplier to wait. A second AI step checks the first one's answer. The workflow pauses in Slack until a finance manager says yes, and only then drafts the email.</p>
             <p class="also light">Skills on show: n8n workflow design, prompt and output validation for an LLM (K2 Horizon), Google Sheets and Slack and Gmail integrations, and a human approval gate designed by someone who has actually owned a cash forecast.</p>
@@ -228,40 +253,22 @@
         </div>
       </article>
 
-      <!-- Nodes -->
-      <article class="proj proj-gold" aria-labelledby="p2-h">
-        <div class="wrap proj-grid flip">
-          <div class="proj-copy rv" data-view>
-            <div class="proj-meta"><span class="badge b-build"><i></i>In build</span><span class="mono">Reconciliation · Full system, built with AI</span></div>
-            <h3 id="p2-h">Nodes</h3>
-            <p class="kicker">The problem: every month-end I matched thousands of lines by hand. The answer: I built the system.</p>
-            <p>At Canon and Pearl Initiative, reconciliations ate the first week of every month. ERP, payment provider and bank never agreed, and the fix was a person with a spreadsheet. I knew exactly what a good reconciliation looked like. I just couldn't code it.</p>
-            <p>With AI coding tools I could. Nodes is a working reconciliation platform I specified and built end to end: a deterministic matching engine that does the accounting, a control pack of 18 checks, a review queue where a reviewer signs off every exception, and an AI layer that explains each gap in plain English but never decides. Every decision leaves an audit trail.</p>
-            <ul class="proj-facts">
-              <li>Rules match, not the model</li>
-              <li><b class="num">18</b> controls in the pack</li>
-              <li>AI explains, a reviewer decides</li>
-            </ul>
-            <a class="btn btn-primary" href="https://nodes-finance.vercel.app" target="_blank" rel="noopener">Visit Nodes <span class="ar" aria-hidden="true">↗</span></a>
-          </div>
-          <a class="proj-vis shot rv" data-view style="--d:120ms" href="https://nodes-finance.vercel.app" target="_blank" rel="noopener" aria-label="Open the Nodes landing page in a new tab">
-            <picture>
-              <source type="image/webp" srcset="assets/images/nodes-landing.webp">
-              <img src="assets/images/nodes-landing.jpg" width="1280" height="720" alt="The Nodes landing page. Reconcile the volume. Review the exceptions." loading="lazy" decoding="async">
-            </picture>
-          </a>
-        </div>
-      </article>
-
       <!-- LSN GTM agent -->
       <article class="proj proj-light" aria-labelledby="p3-h">
         <div class="wrap proj-grid">
           <div class="proj-copy rv" data-view>
-            <div class="proj-meta"><span class="badge b-build"><i></i>In build</span><span class="mono">AI agents · Outbound</span></div>
-            <h3 id="p3-h">LSN GTM agent</h3>
-            <p class="kicker">Finds the next customer before sales has had coffee.</p>
-            <p>Signage companies live on new restaurants and cafés. This agent finds F&amp;B operators in Dubai who may need signage, researches each one and drafts the first message. A person reads every draft before it goes out. Nobody gets a robot email with the wrong name on it.</p>
-            <p class="also">Also at LSN: a quotation generator that replaced hand editing quotes in Canva, and an AI lead form on the company's Webflow site.</p>
+            <div class="proj-meta"><span class="badge b-live"><i></i>In use at LSN Signs</span><span class="mono">Built with Claude Code</span></div>
+            <p class="skill-line dark">AI agent, built with Claude Code</p>
+            <h3 id="p3-h">GTM agent for <a class="link" href="https://www.lsnsigns.com" target="_blank" rel="noopener">LSN Signs</a></h3>
+            <p class="kicker">I'm the finance lead. I also built the company's outbound sales engine.</p>
+            <p>LSN makes signage for restaurants and cafés, and the pipeline depended on whoever remembered to look for new openings. So I sat down with Claude Code and built an agent that does it every day: finds new F&amp;B operators in Dubai, researches each one, scores the fit and drafts a first message in LSN's voice. A person reads every draft before it goes out.</p>
+            <p class="also">Same toolkit, same year: a quotation generator that replaced hand-edited Canva quotes, and an AI lead form on the company's Webflow site. Finance person, shipping software the business runs on.</p>
+            <ul class="proj-facts">
+              <li>Find, research, score, draft</li>
+              <li>Built solo with Claude Code</li>
+              <li>A person approves every send</li>
+            </ul>
+            <a class="btn btn-ghost" href="https://www.lsnsigns.com" target="_blank" rel="noopener">See LSN Signs <span class="ar" aria-hidden="true">↗</span></a>
           </div>
           <div class="proj-vis art rv" data-view style="--d:120ms">
             <svg class="doodle gtm" viewBox="0 0 480 300" aria-hidden="true">
@@ -393,7 +400,7 @@
       <div class="wrap close2-grid">
         <div class="close2-copy rv" data-view>
           <p class="eyebrow light">Let's talk</p>
-          <h2 id="close-h">Hiring for FP&amp;A, reporting or finance systems?</h2>
+          <h2 id="close-h">Hiring in accounting or finance? Let's talk.</h2>
           <p class="lede">Send me the role. I'll tell you honestly whether I'm a good fit, and if I'm not, I'll say so.</p>
           <div class="cta">
             <div class="cv left" data-cv id="close-cv">
@@ -412,10 +419,8 @@
           <p class="email-line"><span class="email">itsfahadtahir@gmail.com</span> · <a class="link light" href="https://www.linkedin.com/in/fahadtahiruae/" target="_blank" rel="noopener">LinkedIn</a></p>
         </div>
         <div class="close2-photo rv" data-view style="--d:120ms">
-          <picture>
-            <source type="image/webp" srcset="assets/images/fahad-portrait-480.webp 480w, assets/images/fahad-portrait.webp 819w" sizes="(min-width:900px) 420px, 60vw">
-            <img src="assets/images/fahad-portrait-480.jpg" width="480" height="600" alt="Fahad Tahir, portrait." loading="lazy" decoding="async">
-          </picture>
+          <img class="walk" src="assets/images/fahad-walking.webp" width="819" height="1024" alt="Fahad Tahir walking past a sunlit wall in Dubai." loading="lazy" decoding="async">
+          <span class="walk-cap mono" aria-hidden="true">Dubai · moving fast, done properly</span>
         </div>
       </div>
     </section>

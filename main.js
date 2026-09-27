@@ -233,3 +233,31 @@
     );
   }
 })();
+
+/* Live Dubai weather in the hero stamp (Open-Meteo, no key) */
+(() => {
+  const el = document.querySelector('[data-weather]');
+  if (!el) return;
+  const wx = el.querySelector('.wx');
+  const code = (c) => c === 0 ? 'clear' : c <= 3 ? 'some cloud' : c <= 48 ? 'hazy' : c <= 67 ? 'rain' : c <= 82 ? 'showers' : 'stormy';
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=25.2048&longitude=55.2708&current=temperature_2m,weather_code,is_day&timezone=Asia%2FDubai')
+    .then((r) => r.json())
+    .then((d) => {
+      const c = d.current;
+      const t = Math.round(c.temperature_2m);
+      const day = c.is_day === 1;
+      el.classList.add(day ? 'day' : 'night');
+      wx.textContent = `${t}°C ${code(c.weather_code)}\n${day ? 'daytime' : 'night'}`;
+    })
+    .catch(() => {
+      const h = Number(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Asia/Dubai' }).format(new Date()));
+      wx.textContent = h >= 6 && h < 19 ? 'daytime' : 'night';
+    });
+})();
+
+/* Closing photo: slide in once visible */
+(() => {
+  const ph = document.querySelector('.close2-photo');
+  if (!ph) return;
+  new IntersectionObserver((es, o) => es.forEach((e) => { if (e.isIntersecting) { ph.classList.add('in'); o.disconnect(); } }), { threshold: 0.35 }).observe(ph);
+})();
