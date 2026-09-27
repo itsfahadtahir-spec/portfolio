@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Working Capital Agent · Fahad Tahir</title>
+  <meta name="description" content="A one-day n8n and K2 Horizon build that spots a cash shortfall before it happens and waits for a finance manager's approval before acting.">
+  <link rel="canonical" href="https://itsfahadtahir-spec.github.io/portfolio/working-capital-agent/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Working Capital Agent · Fahad Tahir">
+  <meta property="og:description" content="A one-day n8n and K2 Horizon build that spots a cash shortfall before it happens and waits for a finance manager's approval before acting.">
+  <meta property="og:image" content="https://itsfahadtahir-spec.github.io/portfolio/assets/images/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F3F3F1">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script>document.documentElement.classList.remove('no-js')</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="paper" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="wrap">
+      <nav class="topnav" aria-label="Site">
+        <a class="brand" href="../" aria-label="Fahad Tahir, home">
+          <span class="mono-mark" aria-hidden="true">FT</span>
+          <span class="name">Fahad Tahir</span>
+        </a>
+        <div class="links">
+          <a href="../#work" class="on">Work</a>
+          <a href="../#experience">Experience</a>
+          <a href="../#about">About</a>
+        </div>
+        <div class="cv" data-cv>
+          <button class="btn btn-primary btn-sm" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="cv-menu-nav">
+            Download CV
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="menu" id="cv-menu-nav" role="menu">
+            <div class="mh">Two versions</div>
+            <a role="menuitem" href="../assets/cv/fahad-tahir-cv-fpa.pdf" download>FP&amp;A CV <span class="mono">PDF · 90 KB</span></a>
+            <a role="menuitem" href="../assets/cv/fahad-tahir-cv-accounting.pdf" download>Accounting CV <span class="mono">PDF · 91 KB</span></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. Header -->
+    <section class="cover" aria-labelledby="h1">
+      <div class="wrap">
+        <a class="back fade-up" href="../#work"><span aria-hidden="true">←</span> Back to all work</a>
+        <p class="eyebrow fade-up" style="--d:80ms;margin-top:32px">Hackathon build · n8n × K2 Horizon · Dubai, <time>25 Sep 2026</time></p>
+        <h1 id="h1" data-split>Working Capital Agent</h1>
+        <p class="sub fade-up" style="--d:240ms">It sees a cash shortfall coming, works out how to avoid it, and waits for a finance manager's approval before anything goes out.</p>
+        <dl class="details fade-up" style="--d:320ms">
+          <div><dt>Built in</dt><dd>One day</dd></div>
+          <div><dt>Tools</dt><dd>n8n, K2 Horizon, Google Sheets, Slack, Gmail</dd></div>
+          <div><dt>Workflow</dt><dd><span class="num">14</span> steps, started on demand</dd></div>
+          <div><dt>Status</dt><dd>Working demo on sample data</dd></div>
+        </dl>
+        <div class="cta fade-up" style="--d:400ms;margin-top:24px">
+          <div class="cv left" data-cv>
+            <button class="btn btn-primary" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="cv-menu-hero" data-magnet>
+              Download CV
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="menu" id="cv-menu-hero" role="menu">
+              <div class="mh">Two versions</div>
+              <a role="menuitem" href="../assets/cv/fahad-tahir-cv-fpa.pdf" download>FP&amp;A CV <span class="mono">PDF · 90 KB</span></a>
+              <a role="menuitem" href="../assets/cv/fahad-tahir-cv-accounting.pdf" download>Accounting CV <span class="mono">PDF · 91 KB</span></a>
+            </div>
+          </div>
+        </div>
+        <p class="trust fade-up" style="--d:480ms"><span>Rules do the maths</span><span>AI explains the options</span><span>A person approves every action</span></p>
+      </div>
+    </section>
+
+    <!-- 2. The short version -->
+    <section aria-label="The short version" style="padding-top:0">
+      <div class="wrap short rv" data-view>
+        <div><b>The problem:</b> a business can look healthy today and still run short of cash next week.</div>
+        <div><b>What I built:</b> an n8n workflow that forecasts <span class="num">30</span> days of cash, spots the day it dips below a safety line, weighs four responses and sends the best one to Slack for approval.</div>
+        <div><b>What happens after the yes:</b> it drafts the email in Gmail for a person to review and send. If the answer is no, the workflow stops.</div>
+      </div>
+    </section>
+
+    <!-- 3. The problem -->
+    <section aria-labelledby="prob-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">01</span>
+          <h2 id="prob-h">Profitable on paper. Short on cash by Wednesday.</h2>
+        </div>
+        <div class="prose rv" data-view>
+          <p>Cash problems rarely look like cash problems at first. Invoices are out, customers will pay eventually, and the P&amp;L looks fine. Then payroll and a supplier payment land in the same week, before the money comes in.</p>
+          <p>At LSN, I catch that gap by rebuilding the cash forecast by hand. I pull in receivables, supplier commitments, VAT and payroll, find the bad week, then test fixes one at a time in a spreadsheet. It works, but it's slow, and a late warning leaves fewer options.</p>
+          <p>I wanted to see how much of that I could hand to a workflow without handing over the decision.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. The scenario -->
+    <section aria-labelledby="scen-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">02</span>
+          <h2 id="scen-h">One company. Five days. <span class="num">AED 20k</span> short.</h2>
+        </div>
+        <div class="split">
+          <div class="rv" data-view>
+            <div class="prose">
+              <p>It's Friday, <time>25 September</time>. The business has <span class="num">AED 85k</span> in the bank, <span class="num">AED 10k</span> above the <span class="num">AED 75k</span> it never wants to drop below. Nothing looks wrong.</p>
+              <p>The agent runs the next <span class="num">30</span> days and finds the problem. By Wednesday, <time>30 September</time>, cash falls to <span class="hl">AED 55k</span>, which is <span class="num">AED 20k</span> under the safety line.</p>
+            </div>
+            <div class="scen" style="margin-top:24px">
+              <dl>
+                <div><dt>Cash today</dt><dd>AED 85k</dd></div>
+                <div><dt>Safety line</dt><dd>AED 75k</dd></div>
+                <div><dt>Lowest point</dt><dd>AED 55k</dd></div>
+                <div><dt>When</dt><dd>30 Sep, in 5 days</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="rv" data-view style="--d:80ms">
+            <div class="chart" data-chart>
+              <p class="src">Two confirmed points, 25 Sep and 30 Sep, and the safety line. Pick an option below to redraw the lowest point.</p>
+            </div>
+            <p class="sr-only" data-chart-live aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. What the agent does -->
+    <section aria-labelledby="does-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">03</span>
+          <h2 id="does-h">It catches the problem, then helps you fix it.</h2>
+        </div>
+        <ol class="steps rv" data-view>
+          <li><b>Pulls in the numbers.</b> It reads four Google Sheets at once: cash movements, settings like the safety line, the scenarios, and the actions behind each scenario.</li>
+          <li><b>Spots the breach.</b> A fixed-rules engine in n8n forecasts every day for the next <span class="num">30</span> days and flags the first day cash drops below the safety line.</li>
+          <li><b>Weighs the options.</b> It models doing nothing, chasing a customer early, delaying a supplier, or doing both.</li>
+          <li><b>Explains the trade-offs.</b> K2 Horizon reads the results and writes a plain-English recommendation: what caused the gap, which option fixes it and what each one costs.</li>
+          <li><b>Checks the AI's answer.</b> A validation step tests K2's output before any person sees it.</li>
+          <li><b>Waits for a person.</b> The recommendation goes to Slack, and the workflow stops there until a finance manager approves or declines.</li>
+          <li><b>Drafts the email.</b> On approval, n8n creates a Gmail draft for a person to review and send. On a no, nothing happens.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6. The options -->
+    <section aria-labelledby="opts-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">04</span>
+          <h2 id="opts-h">Four ways to handle Wednesday.</h2>
+        </div>
+        <div class="opts rv" data-view role="group" aria-label="Options. Selecting one redraws the chart above.">
+          <button class="opt" type="button" aria-pressed="true" data-low="55">
+            <span class="k">Option</span>
+            <h3>Do nothing</h3>
+            <span class="chg">Nothing</span>
+            <span class="low">AED 55k</span>
+            <span class="lowlbl">Lowest cash in 30 days</span>
+            <span class="res"><i aria-hidden="true"></i>Drops below the line</span>
+          </button>
+          <button class="opt ok" type="button" aria-pressed="false" data-low="92">
+            <span class="k">Option</span>
+            <h3>Chase Bluewave early</h3>
+            <span class="chg">Collect <span class="num">AED 37k</span> sooner</span>
+            <span class="low">AED 92k</span>
+            <span class="lowlbl">Lowest cash in 30 days</span>
+            <span class="res"><i aria-hidden="true"></i>Stays above the line</span>
+          </button>
+          <button class="opt ok" type="button" aria-pressed="false" data-low="95">
+            <span class="k">Option</span>
+            <h3>Delay Supplier Alpha</h3>
+            <span class="chg">Pay <span class="num">AED 40k</span> seven days later</span>
+            <span class="low">AED 95k</span>
+            <span class="lowlbl">Lowest cash in 30 days</span>
+            <span class="res"><i aria-hidden="true"></i>Stays above the line</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. The approval -->
+    <section aria-labelledby="appr-h">
+      <div class="wrap split">
+        <div class="rv" data-view>
+          <div class="sec-head">
+            <span class="idx">05</span>
+            <h2 id="appr-h">The agent recommends. You decide.</h2>
+          </div>
+          <div class="prose">
+            <p>I didn't want an AI anywhere near a payment button. In every finance team I've worked in, the person who signs off is accountable for the decision, so the agent does the legwork and stops short of the choice.</p>
+          </div>
+        </div>
+        <div class="rv" data-view style="--d:80ms">
+          <div class="slack" aria-label="Slack message mock">
+            <div class="from"><i aria-hidden="true">n8n</i>Working Capital Agent</div>
+            <b>Working capital alert</b>
+            <p>Cash is forecast to drop below your <span class="num">AED 75k</span> safety line on <time>30 Sep</time>.</p>
+            <div class="kv">
+              <div><span>Lowest point if nothing changes:</span> AED 55k</div>
+              <div><span>Result:</span> no breach in the next 30 days</div>
+            </div>
+            <div class="acts"><span class="btn btn-primary btn-sm" aria-hidden="true">Approve</span><span class="btn btn-secondary btn-sm" aria-hidden="true">Review analysis</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. After the yes -->
+    <section aria-labelledby="after-h">
+      <div class="wrap split">
+        <div class="rv" data-view>
+          <div class="sec-head">
+            <span class="idx">06</span>
+            <h2 id="after-h">One click, and the work is ready.</h2>
+          </div>
+        </div>
+        <div class="rv" data-view>
+          <ol class="seq">
+            <span class="fill" aria-hidden="true"></span>
+            <li style="--d:0ms">The workflow waits in Slack</li>
+            <li style="--d:180ms">A finance manager clicks Approve</li>
+            <li style="--d:360ms">n8n checks the answer</li>
+            <li style="--d:540ms">Email drafted in Gmail, ready for a person to review and send</li>
+            <li class="stop" style="--d:720ms">A "no" stops the workflow and nothing goes out</li>
+          </ol>
+          <p>The email stays a draft. A person reads it and presses send.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. How it's built -->
+    <section aria-labelledby="built-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">07</span>
+          <h2 id="built-h">Rules for the maths. AI for the judgement. A person for the decision.</h2>
+        </div>
+        <div class="rv" data-view>
+          <table class="built">
+            <thead><tr><th>Job</th><th>Handled by</th><th>Why</th></tr></thead>
+            <tbody>
+              <tr><td>The numbers</td><td>A fixed-rules engine in n8n</td><td>Dates, balances, breaches and scenario sums have one right answer. A language model shouldn't be doing the arithmetic.</td></tr>
+              <tr><td>The explanation</td><td>K2 Horizon</td><td>Working out what caused the gap and comparing trade-offs takes judgement, and that's where a reasoning model helps.</td></tr>
+              <tr><td>The check</td><td>A validation step in n8n</td><td>The AI's answer is tested before a person sees it.</td></tr>
+              <tr><td>The workflow</td><td>n8n</td><td>It reads the sheets, merges the data, branches on the approval and creates the draft.</td></tr>
+              <tr><td>The decision</td><td>A finance manager</td><td>They're accountable, so they approve.</td></tr>
+            </tbody>
+          </table>
+          <div class="flow" aria-label="Workflow strip">
+            <span>Start</span><i aria-hidden="true">→</i><span>4 Google Sheets</span><i aria-hidden="true">→</i><span>Merge</span><i aria-hidden="true">→</i><span>Fixed-rules finance engine</span><i aria-hidden="true">→</i><span>K2 Horizon</span><i aria-hidden="true">→</i><span>Validate output</span><i aria-hidden="true">→</i><span class="k">Slack approval (waits)</span><i aria-hidden="true">→</i><span>Approved?</span><i aria-hidden="true">→</i><span>Gmail draft</span>
+          </div>
+          <figure class="shot">
+            <picture>
+              <source type="image/webp" srcset="../assets/images/n8n-workflow.webp">
+              <img src="../assets/images/n8n-workflow.jpg" width="1600" height="782" alt="The Working Capital Agent workflow in n8n. Four Google Sheets feed a merge step, a fixed rules engine, K2 Horizon, a validation step, a Slack approval and a Gmail draft." loading="lazy" decoding="async">
+            </picture>
+            <figcaption>The full workflow in n8n.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. What it won't do -->
+    <section aria-labelledby="guard-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">08</span>
+          <h2 id="guard-h">The guardrails a CFO would ask about</h2>
+        </div>
+        <ul class="guard rv" data-view>
+          <li>It never makes a payment.</li>
+          <li>It never writes or changes a balance. Every number comes from the rules.</li>
+          <li>The AI's answer is checked before a person sees it.</li>
+          <li>Nothing leaves the business without a person's approval, and even then it's a draft.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 11. Why I built it -->
+    <section aria-labelledby="why-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">09</span>
+          <h2 id="why-h">The forecast I already build, with the slow parts automated.</h2>
+        </div>
+        <div class="prose rv" data-view>
+          <p>This is the same rolling cash forecast I keep for LSN's CEO. I handed the workflow the parts I'd give a good analyst: pulling the data, doing the sums and drafting the email. The decision stayed with a person, which is where it belongs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. What's next -->
+    <section aria-labelledby="next-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">10</span>
+          <h2 id="next-h">What's next</h2>
+        </div>
+        <ul class="next rv" data-view>
+          <li>Log every decision and re-run the forecast after approval, so the page can show the gap closing.</li>
+          <li>Run it on a schedule instead of a manual start.</li>
+          <li>Connect it to live accounting data, such as QuickBooks or Xero, instead of a Google Sheet.</li>
+          <li>Time a full run, trigger to approved draft, and publish the real number.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 13. Closing -->
+    <section class="closing" aria-labelledby="close-h">
+      <div class="wrap">
+        <div class="card rv" data-view>
+          <div>
+            <h2 id="close-h">Hiring for FP&amp;A or finance systems?</h2>
+            <p style="margin-top:12px">I've spent <span class="num">10</span> years in the numbers, and now I build the tools around them. If that would help your team, I'd like to hear from you.</p>
+          </div>
+          <div class="acts">
+            <div class="row">
+              <div class="cv" data-cv>
+                <button class="btn btn-primary" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="cv-menu-close" data-magnet>
+                  Download CV
+                  <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="menu" id="cv-menu-close" role="menu">
+                  <div class="mh">Two versions</div>
+                  <a role="menuitem" href="../assets/cv/fahad-tahir-cv-fpa.pdf" download>FP&amp;A CV <span class="mono">PDF · 90 KB</span></a>
+                  <a role="menuitem" href="../assets/cv/fahad-tahir-cv-accounting.pdf" download>Accounting CV <span class="mono">PDF · 91 KB</span></a>
+                </div>
+              </div>
+              <button class="btn btn-ghost" type="button" data-copy="itsfahadtahir@gmail.com">Copy email</button>
+            </div>
+            <span class="email">itsfahadtahir@gmail.com</span>
+          </div>
+        </div>
+        <p style="margin-top:24px"><a class="back" href="../#work" style="font-size:14px;color:var(--text-secondary);text-decoration:none"><span aria-hidden="true">←</span> Back to all work</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="dots">
+        <span>Fahad Tahir</span>
+        <span>Dubai</span>
+        <a class="link" href="https://www.linkedin.com/in/fahadtahiruae/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <span class="mono">© 2026</span>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"><i aria-hidden="true"></i><span></span></div>
+  <script src="../main.js" defer></script>
+</body>
+</html>
