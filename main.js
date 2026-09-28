@@ -234,34 +234,27 @@
   }
 })();
 
-/* Live Dubai weather widget (Open-Meteo, no key) */
+/* Live Dubai weather widget (Open-Meteo, no key; fails soft) */
 (() => {
   const el = document.querySelector('[data-weather]');
   if (!el) return;
   const cond = el.querySelector('.wx-cond');
-  const cells = el.querySelectorAll('.wxh');
+  const temp = el.querySelector('.wx-temp');
+  const ic = el.querySelector('.ic use');
   const name = (c, day) => c === 0 ? (day ? 'Sunny' : 'Clear') : c <= 3 ? 'Partly cloudy' : c <= 48 ? 'Hazy' : c <= 67 ? 'Rain' : c <= 82 ? 'Showers' : 'Stormy';
   const icon = (c, day) => c === 0 ? (day ? 'wx-sun' : 'wx-moon') : c <= 3 ? 'wx-cloudsun' : c <= 48 ? 'wx-cloud' : 'wx-rain';
-  const fmt = (iso) => {
-    const d = new Date(iso);
-    return { h: d.getHours(), label: d.getHours() === 0 ? '12AM' : d.getHours() < 12 ? d.getHours() + 'AM' : d.getHours() === 12 ? '12PM' : (d.getHours() - 12) + 'PM' };
-  };
-  fetch('https://api.open-meteo.com/v1/forecast?latitude=25.2048&longitude=55.2708&current=temperature_2m,weather_code,is_day&hourly=temperature_2m,weather_code&timezone=Asia%2FDubai&forecast_days=2')
+  const ctrl = new AbortController();
+  setTimeout(() => ctrl.abort(), 5000);
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=25.2048&longitude=55.2708&current=temperature_2m,weather_code,is_day&timezone=Asia%2FDubai', { signal: ctrl.signal })
     .then((r) => r.json())
     .then((d) => {
-      const now = new Date(d.current.time);
-      const idx = d.hourly.time.findIndex((t) => new Date(t) >= now);
-      const slots = [d.current, ...(d.hourly.time.slice(idx + 1, idx + 3).map((t, k) => ({ temperature_2m: d.hourly.temperature_2m[idx + 1 + k], weather_code: d.hourly.weather_code[idx + 1 + k], time: t })))];
-      const isDay = (t) => { const h = new Date(t || d.current.time).getHours(); return h >= 6 && h < 19; };
-      cond.textContent = name(d.current.weather_code, d.current.is_day === 1);
-      slots.forEach((c, i) => {
-        const cell = cells[i]; if (!cell || c.temperature_2m == null) return;
-        cell.querySelector('.t').textContent = Math.round(c.temperature_2m) + '°';
-        cell.querySelector('.ic use').setAttribute('href', '#' + icon(c.weather_code, isDay(c.time)));
-        cell.querySelector('.h').textContent = i === 0 ? 'now' : fmt(c.time).label;
-      });
+      const c = d.current;
+      const day = c.is_day === 1;
+      cond.textContent = name(c.weather_code, day);
+      temp.textContent = Math.round(c.temperature_2m) + '°';
+      ic.setAttribute('href', '#' + icon(c.weather_code, day));
     })
-    .catch(() => { cond.textContent = 'Sunny, probably'; });
+    .catch(() => { /* keeps the Sunny default */ });
 })();
 
 /* Closing photo: slide in once visible */

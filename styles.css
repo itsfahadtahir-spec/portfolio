@@ -659,18 +659,16 @@ h2{font-weight:700}
 .proj-gold .sec-head h2{color:var(--navy-900)}
 
 /* v2: weather widget */
-.wxwidget{position:absolute;top:10px;right:-8px;z-index:3;width:196px;padding:14px 16px 12px;border-radius:18px;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 30px rgba(28,34,51,.16);color:var(--navy-800);opacity:0;animation:fadeUp var(--dur-reveal) var(--ease-out) 1100ms forwards;transition:box-shadow .3s}
-.wxwidget:hover,.wxwidget:focus{box-shadow:0 14px 36px rgba(28,34,51,.22);outline:none}
-.wx-head{display:grid;text-align:center;gap:1px}
-.wx-city{font-size:15px;font-weight:600;letter-spacing:-0.01em}
-.wx-cond{font-size:20px;font-weight:700;letter-spacing:-0.02em;color:var(--navy-900)}
-.wx-hours{display:flex;justify-content:space-between;margin-top:10px;padding-top:10px;border-top:1px solid var(--navy-200)}
-.wxh{display:grid;justify-items:center;gap:3px}
-.wxh .t{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
-.wxh .ic{width:18px;height:18px;stroke:var(--champ-700);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;color:var(--champ-700)}
-.wxh .h{font-family:var(--font-mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:var(--navy-500)}
+.wxwidget{position:absolute;top:12px;right:-6px;z-index:3;width:150px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.7);box-shadow:0 8px 22px rgba(28,34,51,.15);color:var(--navy-800);opacity:0;animation:fadeUp var(--dur-reveal) var(--ease-out) 1100ms forwards;transition:box-shadow .3s}
+.wxwidget:hover,.wxwidget:focus{box-shadow:0 12px 28px rgba(28,34,51,.2);outline:none}
+.wx-row{display:flex;align-items:center;gap:8px}
+.wx-row .ic{width:20px;height:20px;flex:none;stroke:var(--champ-700);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;color:var(--champ-700)}
+.wx-now{display:grid;line-height:1.15;min-width:0}
+.wx-now .t{font-size:12px;font-weight:700}
+.wx-cond{font-size:10px;font-weight:600;color:var(--navy-500);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wx-temp{margin-left:auto;font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--navy-900)}
 .wx-fact{max-height:0;overflow:hidden;opacity:0;transition:max-height .45s var(--ease-out),opacity .35s}
-.wx-fact span{display:block;margin-top:10px;padding-top:10px;border-top:1px dashed var(--champ-400);font-size:12px;font-weight:600;color:var(--champ-800);text-align:center}
+.wx-fact span{display:block;margin-top:8px;padding-top:8px;border-top:1px dashed var(--champ-400);font-size:11px;font-weight:600;color:var(--champ-800);text-align:center}
 .wxwidget:hover .wx-fact,.wxwidget:focus .wx-fact,.wxwidget:focus-within .wx-fact{max-height:80px;opacity:1}
-@media (max-width:899px){.wxwidget{right:6px;width:176px}}
+@media (max-width:899px){.wxwidget{right:6px;width:144px}}
 @media (prefers-reduced-motion:reduce){.wxwidget{animation:none;opacity:1}.wx-fact{transition:none}}
