@@ -518,7 +518,7 @@ h2{font-weight:700}
 .bnum span:last-child{font-size:var(--text-sm);color:var(--navy-300);max-width:26ch}
 
 /* projects: each in its own room */
-.work2{padding-block:var(--space-9) 0}
+.work2{padding-block:0}
 .work2 .sec-head{margin-bottom:var(--space-6)}
 .proj{padding-block:var(--space-8)}
 @media (min-width:900px){.proj{padding-block:var(--space-9)}}
@@ -643,3 +643,17 @@ h2{font-weight:700}
 .vthumb .play path{fill:var(--champ-300);stroke:none}
 .vid:hover .play{transform:scale(1.12)}
 .vtag{position:absolute;top:12px;right:12px;padding:5px 12px;border-radius:999px;background:var(--champ-300);color:var(--navy-900);font-family:var(--font-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:600}
+
+/* v2: video player chrome */
+.vthumb{display:block}
+.vthumb .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.vid:hover .play{transform:translate(-50%,-50%) scale(1.12)}
+.vbar{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;gap:6px;padding:10px 14px}
+.vbar i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.18)}
+.vbar span{margin-left:8px;font-family:var(--font-mono);font-size:11px;color:var(--navy-300);letter-spacing:.04em}
+.vprog{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:10px;padding:0 14px 12px}
+.vprog i{display:block;height:3px;flex:1;border-radius:2px;background:linear-gradient(90deg,var(--champ-300) var(--p),rgba(255,255,255,.18) var(--p))}
+.vprog span{font-family:var(--font-mono);font-size:10px;color:var(--navy-300);letter-spacing:.03em;white-space:nowrap}
+.vthumb>.play{top:54%}
+.proj .sec-head{margin-bottom:var(--space-8)}
+.proj-gold .sec-head h2{color:var(--navy-900)}
