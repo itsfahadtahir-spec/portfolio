@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="styles.css?v=5957b23">
+  <link rel="stylesheet" href="styles.css?v=v3a">
   <link rel="preload" as="image" href="assets/images/fahad-portrait.webp" type="image/webp" fetchpriority="high">
   <script>document.documentElement.classList.remove('no-js')</script>
 </head>
@@ -62,7 +62,7 @@
       <div class="wrap hero2-grid">
         <div class="hero2-copy">
           <p class="eyebrow fade-up">Fahad Tahir · Finance · AI automation · Dubai</p>
-          <h1 id="h1" data-split>10 years closing the books in Dubai. Now I build the AI systems that do the slow parts.</h1>
+          <h1 id="h1" data-split>Ten years of finance in Dubai. Close, audit, cash forecasting. Now building the AI systems that do the slow parts.</h1>
           <p class="lede fade-up" style="--d:360ms">I work on the decisions, not the data entry. Ten years of closes, audits and cash forecasts at Canon, Pearl Initiative and now LSN Signs, and lately, AI systems that take the slow parts off my desk.</p>
           <div class="cta fade-up" style="--d:440ms">
             <div class="cv left" data-cv>
@@ -106,14 +106,16 @@
       </div>
     </section>
 
-    <!-- 2. Where I've been -->
-    <div class="wall-strip" aria-label="Where I have worked">
-      <div class="marquee">
-        <ul aria-hidden="true">
-          <li>Canon</li><li>Pearl Initiative</li><li>LSN Signs</li><li>Power BI</li><li>QuickBooks</li><li>SAP Finance</li><li>Orion ERP</li><li>n8n</li><li>K2 Horizon</li><li>Excel</li><li>IFRS 15</li>
-          <li>Canon</li><li>Pearl Initiative</li><li>LSN Signs</li><li>Power BI</li><li>QuickBooks</li><li>SAP Finance</li><li>Orion ERP</li><li>n8n</li><li>K2 Horizon</li><li>Excel</li><li>IFRS 15</li>
-        </ul>
-      </div>
+    <!-- 2. Credibility row -->
+    <div class="cred" aria-label="At a glance">
+      <ul class="cred-row wrap">
+        <li><b>10 yrs</b><span>in finance</span></li>
+        <li><b>Canon</b><span>Fortune-500 scale</span></li>
+        <li><b>Pearl Initiative</b><span>audit, QuickBooks</span></li>
+        <li><b>LSN Signs</b><span>current, finance lead</span></li>
+        <li><b>USD 2.5m/mo</b><span>reporting volume</span></li>
+        <li class="cred-tech"><b>Power BI · SAP · Orion ERP · n8n · K2 Horizon</b><span>works with</span></li>
+      </ul>
     </div>
 
     <!-- 2. Work: one chapter per project -->
@@ -131,7 +133,7 @@
           <div class="proj-copy rv" data-view>
             <div class="proj-meta"><span class="badge b-build"><i></i>In build</span><span class="mono">Flagship · Full reconciliation platform, built with AI</span></div>
             <h3 id="p1-h">Nodes</h3>
-            <p class="kicker">The problem: every month-end I matched thousands of lines by hand. The answer: I built the system.</p>
+            <p class="kicker">What took me a week every month-end now runs in hours. ERP, bank and PSP matched by rules, not me.</p>
             <p>At Canon and Pearl, reconciliation ate the first week of every month. ERP, the payment provider and the bank never agreed, and the fix was me plus a spreadsheet. I knew what a good reconciliation looked like. I just couldn't code it.</p>
             <p>Now I can. Nodes is the platform I designed and built end to end: a deterministic engine does the matching, 18 control checks run over it, a reviewer signs off every exception, and an AI layer explains each gap in plain English without ever deciding. Everything leaves an audit trail.</p>
             <ul class="proj-facts">
@@ -161,7 +163,7 @@
               <li class="logo-k2"><span class="k2">K2</span><span>Horizon</span><small>by MBZUAI Institute of Foundation Models</small></li>
             </ul>
             <h3 id="p2-h">Working Capital Agent</h3>
-            <p class="kicker">Fourteen n8n steps, K2 Horizon doing the thinking.</p>
+            <p class="kicker">Cash squeezes flagged weeks before they hurt, with an AI that proposes the fix and a human who approves it.</p>
             <p>I wired the whole thing myself in a day. n8n pulls cash movements from four sources, a fixed-rules step forecasts the next 30 days, then K2 Horizon weighs the fix: chase a customer early, or ask a supplier to wait. A second AI step checks the first one's work, and nobody gets an email until a finance manager approves it in Slack.</p>
             <p class="also light">For the recruiters: n8n workflow design, prompting and validating an LLM (K2 Horizon), Google Sheets, Slack and Gmail wiring, and an approval gate designed by someone who's actually owned a cash forecast.</p>
             <ul class="proj-facts">
@@ -188,7 +190,7 @@
             <div class="proj-meta"><span class="badge b-live"><i></i>In use at LSN Signs</span><span class="mono">Built with Claude Code</span></div>
             <p class="skill-line dark">AI agent, built with Claude Code</p>
             <h3 id="p3-h">GTM agent for <a class="link" href="https://www.lsnsigns.com" target="_blank" rel="noopener">LSN Signs</a></h3>
-            <p class="kicker">I'm the finance lead. I also built the company's outbound sales engine.</p>
+            <p class="kicker">The finance lead who also built the company's outbound sales engine, in Claude Code.</p>
             <p>LSN sells signage to new restaurants and cafés, and our pipeline depended on whoever remembered to look for openings. So I sat down with Claude Code and built an agent that does it daily: finds new F&amp;B operators in Dubai, researches each one, scores the fit and drafts the first message in our voice. A person reads every draft before anything sends.</p>
             <p class="also">Same toolkit, same year: a quote generator that replaced hand-editing Canva, and an AI lead form on the company's site. Finance guy, shipping software the business runs on.</p>
             <ul class="proj-facts">
@@ -224,25 +226,19 @@
     </section>
 
     <!-- 3. What I'd bring to your team -->
-    <section class="band" aria-label="What I'd bring to your team">
-      <div class="wrap">
-        <p class="band-eyebrow rv" data-view>What I'd bring to your team</p>
-        <div class="band-grid rv" data-view>
-          <div class="bnum"><b>ROI models</b><span>ROI, payback and scenario cases a CFO can pick apart line by line. Built for real money, not coursework</span></div>
-          <div class="bnum"><b>USD 2.5m</b><span>of monthly sales I reported at Canon. Month-end at volume doesn't scare me</span></div>
-          <div class="bnum"><b>SQL + BI</b><span>I pull my own data instead of queuing for it. Power BI today, SQL and Python through CFI next</span></div>
-          <div class="bnum"><b>AI + rules</b><span>Automation with an off switch. Rules do the maths, AI explains, a human says yes or no</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Story -->
     <section class="story" id="story" aria-labelledby="story-h">
       <div class="wrap">
         <div class="sec-head rv" data-view>
           <span class="idx">02</span>
-          <h2 id="story-h">What I'm good at.</h2>
-          <p>I don't record the entries anymore. I turn what's recorded into a decision, a model or a system. Three things I'd bring, each one proven on a real job.</p>
+          <h2 id="story-h">What I'd bring to your team.</h2>
+          <p>I don't record the entries anymore. I turn what's recorded into a decision, a model or a system. The numbers first, then the three things that come with them.</p>
+        </div>
+
+        <div class="band-grid band-inline rv" data-view>
+          <div class="bnum"><b>ROI models</b><span>ROI, payback and scenario cases a CFO can pick apart line by line. Built for real money, not coursework</span></div>
+          <div class="bnum"><b>USD 2.5m</b><span>of monthly sales I reported at Canon. Month-end at volume doesn't scare me</span></div>
+          <div class="bnum"><b>SQL + BI</b><span>I pull my own data instead of queuing for it. Power BI today, SQL and Python through CFI next</span></div>
+          <div class="bnum"><b>AI + rules</b><span>Automation with an off switch. Rules do the maths, AI explains, a human says yes or no</span></div>
         </div>
 
         <ol class="chapters">
@@ -313,7 +309,7 @@
           <article class="xp rv" data-view>
             <div class="xp-co">
               <img class="xp-logo" src="assets/logos/lsn.png" alt="LSN Signs logo" width="34" height="34">
-              <div class="xp-meta"><b>LSN Signs</b><time>Jan 2025 – present · Dubai</time></div>
+              <div class="xp-meta"><b>LSN Signs</b><time>Jan 2025 to present · Dubai</time></div>
             </div>
             <div>
               <h4>Senior Business Associate, Finance and Business Operations</h4>
@@ -327,7 +323,7 @@
           <article class="xp rv" data-view>
             <div class="xp-co">
               <img class="xp-logo" src="assets/logos/pearl.jpg" alt="Pearl Initiative logo" width="34" height="34">
-              <div class="xp-meta"><b>Pearl Initiative</b><time>Oct 2021 – Dec 2024 · Dubai</time></div>
+              <div class="xp-meta"><b>Pearl Initiative</b><time>Oct 2021 to Dec 2024 · Dubai</time></div>
             </div>
             <div>
               <h4>Senior Business Services Associate</h4>
@@ -341,7 +337,7 @@
           <article class="xp rv" data-view>
             <div class="xp-co">
               <img class="xp-logo" src="assets/logos/canon.png" alt="Canon logo" width="34" height="34">
-              <div class="xp-meta"><b>Canon</b><time>Aug 2016 – Sep 2021 · Dubai</time></div>
+              <div class="xp-meta"><b>Canon</b><time>Aug 2016 to Sep 2021 · Dubai</time></div>
             </div>
             <div>
               <h4>Financial Analyst</h4>
@@ -493,6 +489,6 @@
   </footer>
 
   <div class="toast" role="status" aria-live="polite"><span></span></div>
-  <script src="main.js?v=5957b23" defer></script>
+  <script src="main.js?v=v3a" defer></script>
 </body>
 </html>
