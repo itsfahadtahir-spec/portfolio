@@ -275,8 +275,8 @@
     const r = cover.getBoundingClientRect();
     const vh = innerHeight;
     const p = Math.min(1, Math.max(0, 1 - r.top / vh));
-    grid.style.transform = `translateY(${p * -8}%) scale(${1 - p * 0.06})`;
-    grid.style.filter = `brightness(${1 - p * 0.45})`;
+    grid.style.transform = `translateY(${p * -18}%) scale(${1 - p * 0.1})`;
+    grid.style.filter = `brightness(${1 - p * 0.55})`;
     grid.style.transformOrigin = '50% 60%';
   };
   addEventListener('scroll', update, { passive: true });

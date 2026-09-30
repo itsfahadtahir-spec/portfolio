@@ -679,7 +679,7 @@ h2{font-weight:700}
 /* v2: sticky reveal — navy panel pins, roles slide up over it */
 #experience{position:relative;padding-block:0}
 .xp-intro{position:sticky;top:0;z-index:0;min-height:100vh;display:flex;align-items:center;background:var(--navy-900);color:#fff;padding-block:clamp(56px,9vh,96px)}
-.xp-cover{position:relative;z-index:1;background:var(--bg-page);padding-block:var(--space-8) 0;border-radius:24px 24px 0 0;box-shadow:0 -18px 40px rgba(15,20,34,.35)}
+.xp-cover{position:relative;z-index:1;background:var(--bg-page);padding-block:var(--space-8) var(--space-7);border-radius:32px 32px 0 0;box-shadow:0 -24px 60px rgba(15,20,34,.45)}
 .xp-intro-grid{will-change:transform,filter}
 .xp-intro-grid{display:grid;grid-template-columns:60px 1fr;gap:var(--space-4);align-items:start}
 .xp-intro .idx{grid-column:1;font-family:var(--font-mono);font-size:13px;color:var(--champ-300);padding-top:14px}
