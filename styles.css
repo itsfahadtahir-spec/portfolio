@@ -740,3 +740,13 @@ h2{font-weight:700}
 .draft{margin-top:var(--space-6)}
 .intro{font-size:15px;color:var(--navy-700);line-height:1.65;max-width:52ch;margin-top:var(--space-4)}
 .cover .hero-grid{margin-top:var(--space-6)}
+
+/* v3: GTM page density */
+.gtm-dense section{padding-block:var(--space-6)}
+.gtm-dense .cover{padding-block:var(--space-4) var(--space-6)}
+.gtm-dense .sec-head{margin-bottom:var(--space-5)}
+.files{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-5)}
+.file{border:1px solid var(--border);border-radius:var(--radius-lg);padding:var(--space-5);background:var(--bg-surface)}
+.file .fname{font-family:var(--font-mono);font-size:12px;color:var(--champ-600);margin-bottom:10px;letter-spacing:var(--tracking-label)}
+.file p{font-size:14px;color:var(--navy-700);line-height:1.6}
+@media (max-width:899px){.files{grid-template-columns:1fr}}
