@@ -60,7 +60,6 @@ h1,h2,h3{text-wrap:balance;letter-spacing:var(--tracking-heading);line-height:va
 h2{font-size:var(--text-xl);font-weight:600}
 @media (min-width:900px){h2{font-size:var(--text-2xl)}}
 .eyebrow{font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-secondary);display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:18px;height:1px;background:var(--champ-600);flex:none}
 .lede{font-size:var(--text-md);color:var(--navy-700)}
 .sec-head{display:grid;gap:var(--space-3);margin-bottom:var(--space-7)}
 .sec-head p{color:var(--text-secondary);max-width:60ch}
@@ -676,7 +675,7 @@ h2{font-weight:700}
 @media (max-width:899px){.wxwidget{top:-22px;right:8px;width:144px}}
 @media (prefers-reduced-motion:reduce){.wxwidget{animation:none;opacity:1}.wx-fact{transition:none}}
 
-/* v2: sticky reveal — navy panel pins, roles slide up over it */
+/* v2: sticky reveal with navy panel pins, roles slide up over it */
 #experience{position:relative;padding-block:0}
 .xp-intro{position:sticky;top:0;z-index:0;min-height:100vh;display:flex;align-items:center;background:var(--navy-900);color:#fff;padding-block:clamp(56px,9vh,96px)}
 .xp-cover{position:relative;z-index:1;background:var(--bg-page);padding-block:var(--space-8) var(--space-7);border-radius:32px 32px 0 0;box-shadow:0 -24px 60px rgba(15,20,34,.45)}
