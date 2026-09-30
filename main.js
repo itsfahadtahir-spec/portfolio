@@ -234,25 +234,27 @@
   }
 })();
 
-/* Live Dubai weather in the hero stamp (Open-Meteo, no key) */
+/* Live Dubai weather widget (Open-Meteo, no key; fails soft) */
 (() => {
   const el = document.querySelector('[data-weather]');
   if (!el) return;
-  const wx = el.querySelector('.wx');
-  const code = (c) => c === 0 ? 'clear' : c <= 3 ? 'some cloud' : c <= 48 ? 'hazy' : c <= 67 ? 'rain' : c <= 82 ? 'showers' : 'stormy';
-  fetch('https://api.open-meteo.com/v1/forecast?latitude=25.2048&longitude=55.2708&current=temperature_2m,weather_code,is_day&timezone=Asia%2FDubai')
+  const cond = el.querySelector('.wx-cond');
+  const temp = el.querySelector('.wx-temp');
+  const ic = el.querySelector('.ic use');
+  const name = (c, day) => c === 0 ? (day ? 'Sunny' : 'Clear') : c <= 3 ? 'Partly cloudy' : c <= 48 ? 'Hazy' : c <= 67 ? 'Rain' : c <= 82 ? 'Showers' : 'Stormy';
+  const icon = (c, day) => c === 0 ? (day ? 'wx-sun' : 'wx-moon') : c <= 3 ? 'wx-cloudsun' : c <= 48 ? 'wx-cloud' : 'wx-rain';
+  const ctrl = new AbortController();
+  setTimeout(() => ctrl.abort(), 5000);
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=25.2048&longitude=55.2708&current=temperature_2m,weather_code,is_day&timezone=Asia%2FDubai', { signal: ctrl.signal })
     .then((r) => r.json())
     .then((d) => {
       const c = d.current;
-      const t = Math.round(c.temperature_2m);
       const day = c.is_day === 1;
-      el.classList.add(day ? 'day' : 'night');
-      wx.textContent = `${t}°C ${code(c.weather_code)}\n${day ? 'daytime' : 'night'}`;
+      cond.textContent = name(c.weather_code, day);
+      temp.textContent = Math.round(c.temperature_2m) + '°';
+      ic.setAttribute('href', '#' + icon(c.weather_code, day));
     })
-    .catch(() => {
-      const h = Number(new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hour12: false, timeZone: 'Asia/Dubai' }).format(new Date()));
-      wx.textContent = h >= 6 && h < 19 ? 'daytime' : 'night';
-    });
+    .catch(() => { /* keeps the Sunny default */ });
 })();
 
 /* Closing photo: slide in once visible */
@@ -260,4 +262,23 @@
   const ph = document.querySelector('.close2-photo');
   if (!ph) return;
   new IntersectionObserver((es, o) => es.forEach((e) => { if (e.isIntersecting) { ph.classList.add('in'); o.disconnect(); } }), { threshold: 0.35 }).observe(ph);
+})();
+
+/* Sticky reveal: pinned navy panel recedes as the white sheet covers it */
+(() => {
+  const intro = document.querySelector('.xp-intro');
+  const cover = document.querySelector('.xp-cover');
+  const grid = document.querySelector('.xp-intro-grid');
+  if (!intro || !cover || !grid) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const update = () => {
+    const r = cover.getBoundingClientRect();
+    const vh = innerHeight;
+    const p = Math.min(1, Math.max(0, 1 - r.top / vh));
+    grid.style.transform = `translateY(${p * -18}%) scale(${1 - p * 0.1})`;
+    grid.style.filter = `brightness(${1 - p * 0.55})`;
+    grid.style.transformOrigin = '50% 60%';
+  };
+  addEventListener('scroll', update, { passive: true });
+  update();
 })();
