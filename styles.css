@@ -468,7 +468,7 @@ h2{font-weight:700}
 .hero2-grid{display:grid;gap:var(--space-6);align-items:center}
 @media (min-width:900px){.hero2-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-8)}}
 .hero2-copy{display:grid;gap:var(--space-5)}
-.hero2 h1{font-size:clamp(36px,5.8vw,66px);font-weight:600;letter-spacing:-0.03em;line-height:1.06;color:var(--navy-900)}
+.hero2 h1{font-size:clamp(30px,4.2vw,50px);font-weight:600;letter-spacing:-0.03em;line-height:1.06;color:var(--navy-900)}
 .hero2 h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
 .hero2 h1 .w>span{display:inline-block;transform:translateY(110%);animation:rise var(--dur-reveal) var(--ease-out) forwards;animation-delay:calc(var(--i) * 45ms + 80ms)}
 .hero2 .lede{max-width:52ch}
