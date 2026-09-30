@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTM agent for LSN Signs · Fahad Tahir</title>
+  <meta name="description" content="The finance lead who got tired of watching good leads slip, and built the thing that catches them. AI agent built with Claude Code, running at LSN Signs.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css?v=v3a">
+</head>
+<body class="gtm-dense">
+
+  <header class="site-head">
+    <div class="wrap">
+      <nav class="topnav" aria-label="Site">
+        <a class="brand" href="../" aria-label="Fahad Tahir, home">
+          <span class="mono-mark" aria-hidden="true">FT</span>
+          <span class="name">Fahad Tahir</span>
+        </a>
+        <div class="links">
+          <a href="../#work" class="on">Work</a>
+          <a href="../#experience">Experience</a>
+          <a href="../#about">About</a>
+        </div>
+        <a class="btn btn-primary btn-sm" href="../assets/cv/fahad-tahir-cv.pdf" download>Download CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 1. Status + hero -->
+    <section class="cover" aria-labelledby="h1">
+      <div class="wrap">
+        <a class="back fade-up" href="../#work"><span aria-hidden="true">←</span> Back to all work</a>
+        <div class="hero-grid">
+          <div class="fade-up" style="--d:120ms">
+            <p class="eyebrow" style="margin-top:32px">AI agent · built with Claude Code</p>
+            <h1 id="h1" data-split>GTM agent for LSN Signs</h1>
+            <p class="sub fade-up" style="--d:240ms">The finance lead who got tired of watching good leads slip, and built the thing that catches them.</p>
+            <p class="intro fade-up" style="--d:300ms">LSN sells signage to restaurants and cafés opening across Dubai. The problem was never the work. It was timing. A group signs a lease, commits to an opening date, and needs signage within weeks, and we only heard about it if someone happened to notice. So I sat down with Claude Code and built an agent that watches for the opening instead of waiting for it. It finds new F&amp;B operators daily, researches each one, scores the fit, and drafts the first message in our voice. I read every draft before it sends.</p>
+            <div class="proj-meta fade-up" style="--d:360ms;margin-top:20px"><span class="badge b-live"><i></i>In use at LSN Signs</span><span class="mono">Built with Claude Code</span></div>
+          </div>
+          <figure class="proj-vis art fade-up" style="--d:200ms">
+            <svg class="doodle gtm" viewBox="0 0 480 300" aria-hidden="true">
+              <path class="ink dash" d="M70 150H150M212 150h60M334 150h50"/>
+              <path class="ink dash" d="M181 120V70h60M181 180v50h60"/>
+              <circle class="gold" cx="44" cy="150" r="26"/>
+              <path class="ink" d="M34 150h20M44 140v20"/>
+              <circle class="ink" cx="181" cy="150" r="31"/>
+              <circle class="ink" cx="176" cy="145" r="10"/>
+              <path class="ink" d="M183 152l10 10" stroke-width="3"/>
+              <rect class="ink" x="241" y="56" width="34" height="28" rx="6"/>
+              <rect class="ink" x="241" y="216" width="34" height="28" rx="6"/>
+              <rect class="ink fill" x="272" y="122" width="62" height="56" rx="10"/>
+              <path class="ink" d="M286 150l10 10 18-20" stroke-width="3"/>
+              <rect class="ink" x="384" y="128" width="72" height="44" rx="8"/>
+              <path class="ink" d="M384 134l36 22 36-22"/>
+              <text class="lbl" x="44" y="200" text-anchor="middle">Find</text>
+              <text class="lbl" x="181" y="262" text-anchor="middle">Research</text>
+              <text class="lbl" x="303" y="200" text-anchor="middle">A person reads</text>
+              <text class="lbl" x="420" y="200" text-anchor="middle">Send</text>
+            </svg>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2b. How it was built -->
+    <section aria-labelledby="built-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">01</span>
+          <h2 id="built-h">How it was built</h2>
+          <p>One evening, three instruction files in plain English, and Claude Code. No framework, no dashboard, no vendor. The files are the product: they say what a good prospect looks like, what has to be verified, and how we talk. Claude Code reads them and does the run.</p>
+        </div>
+        <div class="files rv" data-view>
+          <div class="file">
+            <p class="fname">01 · what a good prospect looks like</p>
+            <p>Signals worth acting on, ranked. A job post for an outlet manager at an address that isn't trading yet beats a delivery-app listing every time. Openings in malls and towers count more than street shops, because one group usually buys again.</p>
+          </div>
+          <div class="file">
+            <p class="fname">02 · what to verify</p>
+            <p>Every prospect must answer three questions before it counts: who owns the signage decision, which landlord's approval rules apply, and whether they already have a supplier. Each answer needs a source link. Can't verify it, it gets dropped.</p>
+          </div>
+          <div class="file">
+            <p class="fname">03 · how we talk</p>
+            <p>Our voice, written down. Short, specific, no flattery. Every first message is built on one verified fact about that company, never a template. And the last rule is absolute: a person reads every draft before anything sends.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. How it works -->
+    <section aria-labelledby="how-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">02</span>
+          <h2 id="how-h">Four steps, run daily</h2>
+        </div>
+        <ol class="steps rv" data-view>
+          <li><b>Find.</b> It watches the public trail every opening leaves behind: job posts for outlet managers at addresses that aren't trading yet, mall directories, trade press. A group hiring a store manager for a mall unit has committed to a date and hasn't ordered a sign. That's the window.</li>
+          <li><b>Research.</b> Every prospect gets checked before it counts. Who owns the signage decision, which landlord's approval rules apply, whether they already have a supplier. No claim goes in without a source link. If it can't be verified, it gets dropped.</li>
+          <li><b>Score.</b> Each one gets rated out of ten on how well it actually fits. The dropped ones matter as much as the kept ones, and every rejection carries a reason I can check.</li>
+          <li><b>Draft.</b> It writes the first message built on one real fact about that specific company. No blast, no "I came across your profile." Then it stops. A person reads every draft before anything leaves the building.</li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- 3. Watch it run -->
+    <section aria-labelledby="run-h">
+      <div class="wrap">
+        <div class="sec-head rv" data-view>
+          <span class="idx">03</span>
+          <h2 id="run-h">One command, start to finish</h2>
+          <p>This is a real run, not a mock-up. I type one line and step away.</p>
+        </div>
+
+        <div class="split rv" data-view>
+          <div>
+            <div class="term" role="img" aria-label="Terminal showing a run of the lsn-pipeline command">
+<pre>$ /lsn-pipeline
+Stage 1 of 3 — Find
+Stage 2 of 3 — Research
+Stage 3 of 3 — Draft</pre>
+            </div>
+            <p class="cap">It searches, fetches each source, drops anything it can't verify, then writes the file. Five to fifteen minutes, unattended.</p>
+            <div class="phd rv" data-view>
+              <p class="phd-tag">Real run capture goes here</p>
+              <p>Terminal screenshot or recording of an actual /lsn-pipeline run, streaming as it searches, fetches and drops rows.</p>
+            </div>
+          </div>
+          <div>
+            <h3 class="tbl-h">The output: a scored, sourced list</h3>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr><th>Company</th><th>Trigger</th><th>Signal detail</th><th>Weeks to opening</th><th>Likely buyer</th><th>Fit</th><th>Source</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="ph"><td colspan="7">Real rows from output/enriched_*.csv land here. Every row carries a working source link; nothing is invented.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="cap">Every claim links to the page it came from. That's the rule the whole thing runs on.</p>
+
+            <h3 class="tbl-h muted">And what it dropped, with reasons</h3>
+            <ul class="dropped">
+              <li class="ph">Real rows from output/dropped_*.csv land here: company plus drop reason, like "already open and trading" or "no resolving source".</li>
+            </ul>
+            <p class="cap">A prospecting tool that returns five hundred names is easy. One that can tell you why it rejected the other thirteen is the one I trust.</p>
+          </div>
+        </div>
+
+        <div class="draft rv" data-view>
+          <h3 class="tbl-h">The first message, built on one verified fact</h3>
+          <div class="mail">
+            <p class="ph">One real outreach draft from output/outreach_*.md lands here, subject line and body exactly as the agent produced it.</p>
+          </div>
+          <p class="cap">Built from the one fact the research verified. Then it stops and waits for me. Nothing sends without a person.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. The honest part + aside -->
+    <section aria-labelledby="honest-h">
+      <div class="wrap">
+        <div class="split honest rv" data-view>
+          <div>
+            <div class="sec-head">
+              <span class="idx">04</span>
+              <h2 id="honest-h">What this is, and what it isn't</h2>
+            </div>
+            <div class="prose">
+              <p>I built this myself in an evening. Not a product, not a pitch. Three instruction files written in plain English that tell Claude Code what a good prospect looks like, what to verify, and how we talk. The judgment is mine. Knowing that a job post beats a delivery-app listing as a buying signal came from selling signage, not from the model.</p>
+              <p>It's running. It produces real lists I can act on. What I don't have yet is months of reply data, and I'd rather tell you that than invent a number. The next step is letting it draft outreach straight into my inbox for review, which is already built and waiting on me to trust it enough.</p>
+            </div>
+          </div>
+          <div class="pull">
+            <p>The agent wasn't the only thing. I used the same setup to build a quote generator that replaced hours of hand-editing in Canva, and an AI lead form on the company site that qualifies an enquiry before it reaches a human. Finance guy, shipping the software the business runs on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Why this matters -->
+    <section aria-labelledby="why-h" class="why">
+      <div class="wrap">
+        <div class="whycard rv" data-view>
+          <div>
+            <span class="idx">05</span>
+            <h2 id="why-h">Why this matters</h2>
+            <p class="whybody">I don't wait for a tool to exist. If the pipeline needs something and nobody's building it, I build it. I'd rather send ten messages that name something specific than five hundred that name nothing.</p>
+            <p class="cap">Built solo with Claude Code · A person approves every send</p>
+          </div>
+          <div class="whycta">
+            <a class="btn btn-primary" href="https://www.lsnsigns.com" target="_blank" rel="noopener" data-magnet>See LSN Signs <span class="ar" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Next -->
+    <nav class="nextproj" aria-label="Next project">
+      <a class="wrap nextproj-row" href="../#work"><span class="np-l"><span aria-hidden="true">←</span> All work</span></a>
+      <a class="wrap nextproj-row np-next" href="../working-capital-agent/"><span class="np-r">Next: Working Capital Agent <span aria-hidden="true">→</span></span></a>
+    </nav>
+
+    <!-- 8. Closing -->
+    <section class="closing" aria-labelledby="close-h">
+      <div class="wrap">
+        <div class="card rv" data-view>
+          <div>
+            <h2 id="close-h">Hiring in finance? Reach out.</h2>
+            <p style="margin-top:12px">Send me the role. If I'm a good fit I'll tell you why. If I'm not, I'll tell you that too.</p>
+          </div>
+          <div class="acts">
+            <div class="row">
+              <a class="btn btn-primary" href="../assets/cv/fahad-tahir-cv.pdf" download data-magnet>Download CV</a>
+              <button class="btn btn-ghost" type="button" data-copy="itsfahadtahir@gmail.com">Copy email</button>
+            </div>
+            <span class="email">itsfahadtahir@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" role="status" aria-live="polite"><span></span></div>
+  <script src="../main.js?v=v3a" defer></script>
+</body>
+</html>
