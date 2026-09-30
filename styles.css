@@ -750,3 +750,7 @@ h2{font-weight:700}
 .file .fname{font-family:var(--font-mono);font-size:12px;color:var(--champ-600);margin-bottom:10px;letter-spacing:var(--tracking-label)}
 .file p{font-size:14px;color:var(--navy-700);line-height:1.6}
 @media (max-width:899px){.files{grid-template-columns:1fr}}
+
+/* v3: GTM page — wider prose, tighter rhythm */
+.gtm-dense section{padding-block:var(--space-5)}
+.gtm-dense .wrap.narrow{max-width:900px}
