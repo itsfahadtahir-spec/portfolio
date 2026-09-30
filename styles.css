@@ -229,9 +229,12 @@ h2{font-size:var(--text-xl);font-weight:600}
 
 /* ---------- experience ---------- */
 .xp-list{border-top:1px solid var(--border)}
-.xp{display:grid;grid-template-columns:150px minmax(0,1fr);gap:var(--space-5);padding-block:var(--space-5);border-bottom:1px solid var(--border);position:relative}
-.xp .when{font-family:var(--font-mono);font-size:12px;color:var(--text-secondary);padding-top:3px;display:grid;gap:4px;align-content:start}
-.xp .when .dur{color:var(--text-muted)}
+.xp{display:grid;grid-template-columns:240px minmax(0,1fr);gap:var(--space-5);padding-block:var(--space-5);border-bottom:1px solid var(--border);position:relative}
+.xp-co{display:flex;align-items:flex-start;gap:12px;padding-top:2px}
+.xp-logo{width:34px;height:34px;border-radius:8px;object-fit:contain;background:#fff;border:1px solid var(--border);flex:none}
+.xp-meta{display:grid;gap:3px}
+.xp-meta b{font-size:15px;font-weight:700;color:var(--navy-900);letter-spacing:-0.01em}
+.xp-meta time{font-family:var(--font-sans);font-size:13px;color:var(--text-secondary);font-variant-numeric:normal}
 .xp h4{font-size:var(--text-base);font-weight:600}
 .xp .org{font-size:var(--text-sm);color:var(--text-secondary);margin-bottom:var(--space-2)}
 .xp ul{margin:0;padding-left:18px;font-size:var(--text-sm);color:var(--navy-700);display:grid;gap:4px;max-width:62ch}
