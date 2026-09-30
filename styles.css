@@ -754,3 +754,13 @@ h2{font-weight:700}
 /* v3: GTM page — wider prose, tighter rhythm */
 .gtm-dense section{padding-block:var(--space-5)}
 .gtm-dense .wrap.narrow{max-width:900px}
+
+/* v3: GTM tail — dense closing zone */
+.honest{align-items:start}
+.honest .pull{margin-top:calc(var(--space-5) + 64px)}
+.why .whycard{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--space-6);align-items:end;background:var(--champ-50);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6) var(--space-7)}
+.why .idx{font-family:var(--font-mono);font-size:13px;color:var(--champ-600);display:block;margin-bottom:8px}
+.why h2{margin:0}
+.whybody{font-size:16px;color:var(--navy-700);line-height:1.65;max-width:52ch;margin-top:var(--space-4)}
+.whycta{white-space:nowrap}
+@media (max-width:899px){.why .whycard{grid-template-columns:1fr}.honest .pull{margin-top:0}}
