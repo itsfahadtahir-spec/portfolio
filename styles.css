@@ -764,3 +764,10 @@ h2{font-weight:700}
 .whybody{font-size:16px;color:var(--navy-700);line-height:1.65;max-width:52ch;margin-top:var(--space-4)}
 .whycta{white-space:nowrap}
 @media (max-width:899px){.why .whycard{grid-template-columns:1fr}.honest .pull{margin-top:0}}
+
+/* v3: GTM mobile containment + next nav */
+.gtm-dense .split>*{min-width:0}
+.gtm-dense .term{max-width:100%}
+.tbl-wrap{max-width:100%}
+.np-next{border-top:1px solid var(--border)}
+.np-next .np-r{margin-left:auto}
