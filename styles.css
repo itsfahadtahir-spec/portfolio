@@ -673,8 +673,10 @@ h2{font-weight:700}
 @media (max-width:899px){.wxwidget{top:-22px;right:8px;width:144px}}
 @media (prefers-reduced-motion:reduce){.wxwidget{animation:none;opacity:1}.wx-fact{transition:none}}
 
-/* v2: full-bleed experience intro */
-.xp-intro{background:var(--navy-900);color:#fff;padding-block:clamp(96px,18vh,180px) clamp(56px,9vh,96px);margin-bottom:var(--space-8)}
+/* v2: sticky reveal — navy panel pins, roles slide up over it */
+#experience{position:relative}
+.xp-intro{position:sticky;top:0;z-index:0;min-height:100vh;display:flex;align-items:center;background:var(--navy-900);color:#fff;padding-block:clamp(56px,9vh,96px)}
+.xp-cover{position:relative;z-index:1;background:var(--bg-page);padding-top:var(--space-8);border-radius:24px 24px 0 0;box-shadow:0 -18px 40px rgba(15,20,34,.35)}
 .xp-intro-grid{display:grid;grid-template-columns:60px 1fr;gap:var(--space-4);align-items:start}
 .xp-intro .idx{grid-column:1;font-family:var(--font-mono);font-size:13px;color:var(--champ-300);padding-top:14px}
 .xp-intro h2{grid-column:2;font-size:clamp(56px,9.5vw,128px);font-weight:600;letter-spacing:-0.04em;line-height:.95;color:#fff}
