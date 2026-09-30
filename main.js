@@ -263,3 +263,22 @@
   if (!ph) return;
   new IntersectionObserver((es, o) => es.forEach((e) => { if (e.isIntersecting) { ph.classList.add('in'); o.disconnect(); } }), { threshold: 0.35 }).observe(ph);
 })();
+
+/* Sticky reveal: pinned navy panel recedes as the white sheet covers it */
+(() => {
+  const intro = document.querySelector('.xp-intro');
+  const cover = document.querySelector('.xp-cover');
+  const grid = document.querySelector('.xp-intro-grid');
+  if (!intro || !cover || !grid) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const update = () => {
+    const r = cover.getBoundingClientRect();
+    const vh = innerHeight;
+    const p = Math.min(1, Math.max(0, 1 - r.top / vh));
+    grid.style.transform = `translateY(${p * -8}%) scale(${1 - p * 0.06})`;
+    grid.style.filter = `brightness(${1 - p * 0.45})`;
+    grid.style.transformOrigin = '50% 60%';
+  };
+  addEventListener('scroll', update, { passive: true });
+  update();
+})();
