@@ -429,6 +429,14 @@
       </div>
     </section>
 
+    <div class="vlb" id="vlb" role="dialog" aria-modal="true" aria-label="Video player" hidden>
+      <div class="vlb-back" data-vlb-close></div>
+      <div class="vlb-frame">
+        <button class="vlb-x" type="button" data-vlb-close aria-label="Close video">×</button>
+        <video id="vlb-video" controls playsinline preload="metadata"></video>
+      </div>
+    </div>
+
     <!-- 9. Closing -->
     <section class="close2 closing" id="about" aria-labelledby="close-h">
       <div class="wrap close2-grid">
