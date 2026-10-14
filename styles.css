@@ -1349,3 +1349,8 @@ h2{font-weight:700}
 .wcawin .wsent circle{fill:#22A055;stroke:#fff;stroke-width:2}
 .wcawin .wsent{transform-box:fill-box;transform-origin:center;animation:wsentIn 12s ease-out infinite}
 @keyframes wsentIn{0%,84%{transform:scale(0);opacity:0}88%{transform:scale(1.15);opacity:1}92%,96%{transform:scale(1);opacity:1}99%,100%{opacity:0}}
+
+/* Nodes logo chip on the cream section (logos base styles assume dark bg) */
+.logos-pre{margin:0 0 6px}
+.logos-pre li.logo-nodes{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 8px;border:1px solid var(--border);border-radius:999px;background:var(--bg-surface);font-weight:600;font-size:13.5px;letter-spacing:0;color:var(--navy-800);line-height:1}
+.logo-nodes svg{width:20px;height:20px}
