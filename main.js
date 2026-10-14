@@ -50,6 +50,32 @@
     requestAnimationFrame(tick);
   }
 
+  /* Nodes animation: 3-scene loop in the work-card frame. */
+  const nxw = $('#nxwin');
+  if (nxw) {
+    const scenes = $$('.nx-scene', nxw);
+    const steps = $$('.nx-steps .st', nxw);
+    const durs = [4200, 5000, 7500];
+    let cur = 0;
+    const count = $('#nx-count');
+    const setScene = (n) => {
+      scenes.forEach((s, i) => s.classList.toggle('on', i === n));
+      steps.forEach((s, i) => {
+        s.classList.toggle('on', i === n);
+        if (i === n) s.style.setProperty('--stepdur', durs[n] + 'ms');
+      });
+      if (n === 1 && count && !reduce) {
+        const t0 = performance.now();
+        const tk = (t) => { const p = Math.min(1, (t - t0) / 1100); count.textContent = Math.round(1000 * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US'); if (p < 1 && cur === n) requestAnimationFrame(tk); };
+        requestAnimationFrame(tk);
+      }
+    };
+    steps[0].style.setProperty('--stepdur', durs[0] + 'ms');
+    if (reduce) { setScene(2); return; }
+    const loop = () => setTimeout(() => { if (!document.hidden) { cur = (cur + 1) % 3; setScene(cur); } loop(); }, durs[cur]);
+    loop();
+  }
+
   /* Nav scroll spy. */
   const spy = $('[data-spy]');
   if (spy) {

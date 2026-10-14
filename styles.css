@@ -1206,3 +1206,85 @@ h2{font-weight:700}
 @keyframes gpulse{0%{cx:130px;cy:210px;opacity:0}5%{opacity:1}18%{cx:290px}34%{cx:290px}50%{cx:450px}64%{cx:450px}78%{cx:585px;opacity:1}88%,100%{cx:585px;opacity:0}}
 
 @media (prefers-reduced-motion:reduce){.ascene *{animation:none!important}}
+
+/* ====== Nodes animation port (3-scene loop, matches landing) ====== */
+.nxwin{background:#fff;border-radius:10px;overflow:hidden;display:grid;grid-template-rows:auto 1fr auto}
+.nx-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--navy-200);font-size:12px}
+.nx-bar .nxmark{width:20px;height:20px}
+.nx-bar b{font-weight:700;color:var(--navy-900)}
+.nx-bar span{color:var(--navy-500);font-size:11px}
+.nx-bar em{margin-left:auto;font-style:normal;font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;color:var(--navy-600);background:var(--navy-100);padding:3px 8px;border-radius:10px}
+.nx-stage{position:relative;min-height:340px}
+.nx-scene{position:absolute;inset:0;padding:16px 20px;opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease;pointer-events:none}
+.nx-scene.on{opacity:1;transform:none;pointer-events:auto}
+.nx-eyebrow{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;color:#0891B2;text-transform:uppercase;margin:0 0 12px}
+.nx-cap{font-size:10.5px;color:var(--navy-500);margin:10px 0 0}
+.mono{font-family:var(--font-mono);font-size:.85em}
+
+/* scene 1: sources -> engine */
+.nx-files{display:grid;gap:8px;width:52%}
+.nx-src{background:var(--navy-50);border:1px solid var(--navy-200);border-radius:8px;padding:8px 11px;display:grid;gap:2px}
+.nx-src b{font-size:11.5px;color:var(--navy-800)}
+.nx-src span{font-size:10px;color:var(--navy-500)}
+.nx-wires{position:absolute;left:52%;top:56px;width:22%;height:190px}
+.nx-wires .wire{fill:none;stroke:#67E8F9;stroke-width:1.6;stroke-dasharray:4 5;opacity:.85}
+.nx-wires .pdrop{fill:#0891B2}
+.nx-engine{position:absolute;right:5%;top:130px;width:44px;height:44px;border-radius:10px;background:#0E7490;display:grid;place-items:center}
+.nx-engine svg{width:28px;height:28px}
+.nx-checks{list-style:none;margin:14px 0 0;padding:0;display:flex;gap:6px;flex-wrap:wrap;width:70%}
+.nx-checks li{font-family:var(--font-mono);font-size:8.5px;color:var(--navy-600);background:#fff;border:1px solid var(--navy-200);border-radius:10px;padding:3px 8px}
+.nx-checks li::before{content:"\2713 ";color:#22A055}
+
+/* scene 2: reconcile */
+.nx-big{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.nx-big .num{font-size:42px;font-weight:700;letter-spacing:-0.03em;color:var(--navy-900)}
+.nx-big .l{font-size:12px;color:var(--navy-600)}
+.nx-barx{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--navy-100);margin-bottom:12px}
+.nx-barx .a{width:88%;background:#22A055}
+.nx-barx .b{width:7%;background:repeating-linear-gradient(135deg,#22A055 0 3px,#15803D 3px 6px)}
+.nx-barx .c{width:5%;background:#D99A1E}
+.nx-legend{display:grid;gap:5px;margin-bottom:12px}
+.nx-legend>div{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--navy-700)}
+.nx-legend .sw{width:10px;height:10px;border-radius:3px;flex:none}
+.nx-legend .sw.g1{background:#22A055}
+.nx-legend .sw.g2{background:repeating-linear-gradient(135deg,#22A055 0 3px,#15803D 3px 6px)}
+.nx-legend .sw.am{background:#D99A1E}
+.badge{font-size:8px;font-weight:700;letter-spacing:.06em;padding:2px 6px;border-radius:8px}
+.badge.ok{background:#DCFCE7;color:#15803D}
+.badge.rv2{background:#FDF3DC;color:#B17A0F}
+.badge.ai{background:#E0F2FE;color:#0369A1}
+.nx-legend .num{margin-left:auto;font-weight:700;color:var(--navy-900)}
+.nx-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.nx-stats>div{background:var(--navy-50);border:1px solid var(--navy-200);border-radius:8px;padding:8px 11px;display:grid;gap:2px}
+.nx-stats span{font-size:10px;color:var(--navy-500)}
+.nx-stats b{font-size:13px;color:var(--navy-900)}
+
+/* scene 3: review */
+.nx-caseh{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.nx-caseh .id{font-family:var(--font-mono);font-size:10px;font-weight:700;color:var(--navy-800)}
+.nx-caseh .k{font-size:11px;color:var(--navy-600)}
+.nx-s3grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.nx-panel{background:var(--navy-50);border:1px solid var(--navy-200);border-radius:8px;padding:9px 11px}
+.nx-panel h5{margin:0 0 6px;font-size:10px;font-weight:700;color:var(--navy-700);text-transform:uppercase;letter-spacing:.06em}
+.calc{display:grid;gap:3px;font-size:10.5px}
+.calc>div{display:flex;justify-content:space-between;color:var(--navy-600)}
+.calc .tot{border-top:1px solid var(--navy-200);padding-top:3px;font-weight:700;color:var(--navy-900)}
+.cand{border:1px solid var(--navy-200);border-radius:7px;padding:6px 8px;display:grid;gap:1px;margin-bottom:5px;background:#fff}
+.cand .rid{font-family:var(--font-mono);font-size:9px;color:#0891B2;font-weight:700}
+.cand .amt{font-size:11px;font-weight:700;color:var(--navy-900)}
+.cand .meta{font-size:9px;color:var(--navy-500)}
+.nx-note{background:#F0F9FF;border:1px solid #BAE6FD;border-radius:8px;padding:8px 11px}
+.nx-note p{margin:4px 0 0;font-size:10.5px;color:var(--navy-600);line-height:1.45}
+
+/* step rail */
+.nx-steps{display:flex;border-top:1px solid var(--navy-200)}
+.nx-steps .st{flex:1;display:flex;align-items:center;gap:6px;justify-content:center;padding:9px 0;font-size:11px;color:var(--navy-500);position:relative}
+.nx-steps .st i{font-style:normal}
+.nx-steps .st>i:first-child{width:16px;height:16px;border-radius:50%;border:1.4px solid var(--navy-300);display:grid;place-items:center;font-size:9px;font-weight:700;color:var(--navy-500)}
+.nx-steps .st.on{color:#0891B2;font-weight:600}
+.nx-steps .st.on>i:first-child{border-color:#0891B2;color:#0891B2}
+.nx-steps .prog{position:absolute;left:0;bottom:-1px;height:2px;background:#0891B2;width:0}
+.nx-steps .st.on .prog{animation:stepFill var(--stepdur,4s) linear forwards}
+.nxwin .nx-s1{--d:4.2s}.nxwin .nx-s2{--d:5s}.nxwin .nx-s3{--d:7.5s}
+@keyframes stepFill{to{width:100%}}
+@media (prefers-reduced-motion:reduce){.nx-scene{transition:none}.nx-wires .pdrop{display:none}.nx-steps .prog{display:none}}
