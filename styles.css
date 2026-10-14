@@ -1447,3 +1447,20 @@ h2{font-weight:700}
 /* step rail */
 .wsteps .st{animation:none}
 @media (prefers-reduced-motion:reduce){.wc-stage *{animation:none!important}}
+
+/* WCA v5.1: real logos + n8n dark chrome + glitch fix */
+.wf-logo{width:26px;height:26px;flex:none;border-radius:6px}
+.wh-logo{width:34px;height:34px;margin:0 auto 8px;display:block}
+.wh-ic svg{display:block}
+.wc-file{display:flex}
+/* n8n-flavoured dark chrome bar, distinct from Nodes' light bar */
+.wcawin .nx-bar{background:#22262F;border-bottom-color:rgba(255,255,255,.1)}
+.wcawin .nx-bar b{color:#EA4B71}
+.wcawin .nx-bar span{color:#B9BEC9}
+.wcawin .nx-bar em{background:rgba(234,75,113,.14);color:#F08AA3;border:1px solid rgba(234,75,113,.3)}
+.wsteps .st .prog{background:#EA4B71}
+.wsteps .st.on,.wsteps .st.on>i:first-child{color:#D43D63;border-color:#D43D63}
+
+/* kill scene-swap flash: children stay hidden while a scene fades out */
+.nx-scene{visibility:hidden;transition:opacity .45s ease,transform .45s ease,visibility 0s .45s}
+.nx-scene.on{visibility:visible;transition:opacity .45s ease,transform .45s ease}
