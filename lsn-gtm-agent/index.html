@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GTM agent for LSN Signs · Fahad Tahir</title>
-  <meta name="description" content="The finance lead who got tired of watching good leads slip, and built the thing that catches them. AI agent built with Claude Code, running at LSN Signs.">
+  <meta name="description" content="I got tired of watching good leads slip, so I built the thing that catches them. AI agent built with Claude Code, running at LSN Signs.">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=v4">
+  <link rel="stylesheet" href="../styles.css?v=v5">
 </head>
 <body class="gtm-dense">
 
@@ -39,7 +39,7 @@
           <div class="fade-up" style="--d:120ms">
             <p class="eyebrow" style="margin-top:32px">AI agent · built with Claude Code</p>
             <h1 id="h1" data-split>GTM agent for LSN Signs</h1>
-            <p class="sub fade-up" style="--d:240ms">The finance lead who got tired of watching good leads slip, and built the thing that catches them.</p>
+            <p class="sub fade-up" style="--d:240ms">A finance person who got tired of watching good leads slip, and built the thing that catches them.</p>
             <p class="intro fade-up" style="--d:300ms">LSN sells signage to restaurants and cafés opening across Dubai. The problem was never the work. It was timing. A group signs a lease, commits to an opening date, and needs signage within weeks, and we only heard about it if someone happened to notice. So I sat down with Claude Code and built an agent that watches for the opening instead of waiting for it. It finds new F&amp;B operators daily, researches each one, scores the fit, and drafts the first message in our voice. I read every draft before it sends.</p>
             <div class="proj-meta fade-up" style="--d:360ms;margin-top:20px"><span class="badge b-live"><i></i>In use at LSN Signs</span><span class="mono">Built with Claude Code</span></div>
           </div>
@@ -128,39 +128,16 @@ Stage 2 of 3 — Research
 Stage 3 of 3 — Draft</pre>
             </div>
             <p class="cap">It searches, fetches each source, drops anything it can't verify, then writes the file. Five to fifteen minutes, unattended.</p>
-            <div class="phd rv" data-view>
-              <p class="phd-tag">Real run capture goes here</p>
-              <p>Terminal screenshot or recording of an actual /lsn-pipeline run, streaming as it searches, fetches and drops rows.</p>
-            </div>
+
           </div>
           <div>
-            <h3 class="tbl-h">The output: a scored, sourced list</h3>
-            <div class="tbl-wrap">
-              <table class="tbl">
-                <thead>
-                  <tr><th>Company</th><th>Trigger</th><th>Signal detail</th><th>Weeks to opening</th><th>Likely buyer</th><th>Fit</th><th>Source</th></tr>
-                </thead>
-                <tbody>
-                  <tr class="ph"><td colspan="7">Real rows from output/enriched_*.csv land here. Every row carries a working source link; nothing is invented.</td></tr>
-                </tbody>
-              </table>
-            </div>
             <p class="cap">Every claim links to the page it came from. That's the rule the whole thing runs on.</p>
-
-            <h3 class="tbl-h muted">And what it dropped, with reasons</h3>
-            <ul class="dropped">
-              <li class="ph">Real rows from output/dropped_*.csv land here: company plus drop reason, like "already open and trading" or "no resolving source".</li>
-            </ul>
             <p class="cap">A prospecting tool that returns five hundred names is easy. One that can tell you why it rejected the other thirteen is the one I trust.</p>
           </div>
         </div>
 
         <div class="draft rv" data-view>
-          <h3 class="tbl-h">The first message, built on one verified fact</h3>
-          <div class="mail">
-            <p class="ph">One real outreach draft from output/outreach_*.md lands here, subject line and body exactly as the agent produced it.</p>
-          </div>
-          <p class="cap">Built from the one fact the research verified. Then it stops and waits for me. Nothing sends without a person.</p>
+          <p class="cap">The first message is built on one verified fact. Then it stops and waits for me. Nothing sends without a person.</p>
         </div>
       </div>
     </section>
@@ -180,24 +157,7 @@ Stage 3 of 3 — Draft</pre>
             </div>
           </div>
           <div class="pull">
-            <p>The agent wasn't the only thing. I used the same setup to build a quote generator that replaced hours of hand-editing in Canva, and an AI lead form on the company site that qualifies an enquiry before it reaches a human. Finance guy, shipping the software the business runs on.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. Why this matters -->
-    <section aria-labelledby="why-h" class="why">
-      <div class="wrap">
-        <div class="whycard rv" data-view>
-          <div>
-            <span class="idx">05</span>
-            <h2 id="why-h">Why this matters</h2>
-            <p class="whybody">I don't wait for a tool to exist. If the pipeline needs something and nobody's building it, I build it. I'd rather send ten messages that name something specific than five hundred that name nothing.</p>
-            <p class="cap">Built solo with Claude Code · A person approves every send</p>
-          </div>
-          <div class="whycta">
-            <a class="btn btn-primary" href="https://www.lsnsigns.com" target="_blank" rel="noopener" data-magnet>See LSN Signs <span class="ar" aria-hidden="true">→</span></a>
+            <p>The agent wasn't the only thing. I used the same setup to build a quote generator that replaced hours of hand-editing in Canva, and an AI lead form on the company site that qualifies an enquiry before it reaches a human.</p>
           </div>
         </div>
       </div>
@@ -230,6 +190,6 @@ Stage 3 of 3 — Draft</pre>
   </main>
 
   <div class="toast" role="status" aria-live="polite"><span></span></div>
-  <script src="../main.js?v=v4" defer></script>
+  <script src="../main.js?v=v5" defer></script>
 </body>
 </html>

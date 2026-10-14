@@ -159,7 +159,7 @@
   if (chart) {
     const W = 640, H = 300, padL = 68, padR = 24, padT = 24, padB = 40;
     const x0 = padL, x1 = W - padR;
-    const yMin = 40, yMax = 100;
+    const yMin = 40, yMax = 140;
     const y = (v) => padT + (H - padT - padB) * (1 - (v - yMin) / (yMax - yMin));
     const days = 30;
     const x = (d) => x0 + ((x1 - x0) * d) / days;
@@ -173,7 +173,7 @@
     };
     const svg = mk('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-labelledby': 'chart-title' });
     svg.appendChild(mk('title', { id: 'chart-title' }, 'Cash forecast. AED 85k on 25 Sep falls to AED 55k on 30 Sep, below the AED 75k safety line.'));
-    [50, 60, 70, 80, 90, 100].forEach((v) => {
+    [50, 70, 90, 110, 130].forEach((v) => {
       svg.appendChild(mk('line', { class: 'grid', x1: x0, x2: x1, y1: y(v), y2: y(v) }));
       svg.appendChild(mk('text', { class: 'axis', x: x0 - 10, y: y(v) + 4, 'text-anchor': 'end' }, `AED ${v}k`));
     });
@@ -228,7 +228,7 @@
         draw(Number(b.dataset.low), true);
         chart.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
         const live = $('[data-chart-live]');
-        if (live) live.textContent = `${b.querySelector('h3').textContent}: lowest cash in 30 days AED ${b.dataset.low}k.`;
+        if (live) live.textContent = `${b.querySelector('h3').textContent}: cash on 30 Sep AED ${b.dataset.low}k.`;
       })
     );
   }
