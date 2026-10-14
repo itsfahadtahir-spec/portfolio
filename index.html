@@ -192,7 +192,6 @@
             <p class="kicker">Cash gaps flagged days before they land, with an AI that proposes the fix and a human who approves it.</p>
             <p>I wired the whole thing myself in a day. n8n pulls cash movements from four sources, a fixed-rules step forecasts the next 30 days, then K2 Horizon weighs the fix: chase a customer early, or ask a supplier to wait. A second AI step checks the first one's work, and nobody gets an email until a finance manager approves it in Slack.</p>
             <ul class="chips" aria-label="Skills shown in this build">
-              <li>n8n workflow design</li>
               <li>LLM prompting and validation (K2 Horizon)</li>
               <li>Google Sheets, Slack, Gmail</li>
               <li>Approval gate design</li>
@@ -302,23 +301,56 @@
             </div>
           </div>
           <a class="proj-vis shot shot-drift rv" data-view style="--d:120ms" href="lsn-gtm-agent/" aria-label="Open the LSN GTM agent case study">
-            <svg class="ascene ascene-gtm" viewBox="0 0 640 480" role="img" aria-label="Animated pipeline. A prospect card travels from find to research to a person reading to send.">
-  <defs><clipPath id="gclip"><rect x="0" y="0" width="640" height="480" rx="14"/></clipPath></defs>
-  <g clip-path="url(#gclip)">
-  <rect width="640" height="480" fill="#1C2233"/>
-  <rect x="16" y="16" width="608" height="448" rx="10" fill="#FAF6EE"/>
-  <text x="48" y="52" class="nfont gcap">DAILY PROSPECTING PIPELINE</text>
-  <path class="gpath" d="M130 210 H510"/>
-  <g class="gnode g1"><rect x="70" y="150" width="120" height="120" rx="14"/><path d="M130 196v28M116 210h28"/><text x="130" y="298" text-anchor="middle" class="gfont">Find</text></g>
-  <g class="gnode g2"><rect x="230" y="150" width="120" height="120" rx="14"/><circle cx="283" cy="200" r="12"/><path d="M291 209l11 11"/><text x="290" y="298" text-anchor="middle" class="gfont">Research</text></g>
-  <g class="gnode g3"><rect x="390" y="150" width="120" height="120" rx="14"/><circle cx="450" cy="196" r="10"/><path d="M450 212c-12 0-19 8-19 16h38c0-8-7-16-19-16z"/><text x="450" y="298" text-anchor="middle" class="gfont">Person reads</text></g>
-  <g class="gnode g4"><rect x="550" y="150" width="70" height="120" rx="14"/><path d="M566 196h38v22h-38zM566 196l19 11 19-11"/><text x="585" y="298" text-anchor="middle" class="gfont">Send</text></g>
-  <g class="glead"><rect x="84" y="120" width="92" height="60" rx="10"/><text x="130" y="143" text-anchor="middle" class="gfont gl">Marina caf&#233;</text><text x="130" y="160" text-anchor="middle" class="gfont gs">new F&amp;B opening</text></g>
-  <g class="gscore"><rect x="256" y="118" width="88" height="26" rx="13"/><text x="300" y="135" text-anchor="middle" class="gfont gsc">fit 92 &#183; grade A</text></g>
-  <g class="gmsg"><rect x="200" y="330" width="240" height="86" rx="12"/><text x="220" y="354" class="gfont gm">Draft ready</text><text x="220" y="374" class="gfont gs">"Saw the Marina signage project"</text><rect x="220" y="384" width="76" height="20" rx="10" fill="#1C2233"/><text x="258" y="398" text-anchor="middle" class="gfont na">Review</text></g>
-  <circle class="gpulse" r="7"/>
-  </g>
-</svg>
+            <div class="nxwin gtmwin" aria-label="How the GTM agent finds, scores and gates outreach for LSN Signs">
+  <div class="nx-bar">
+    <svg class="nxmark" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#D97757" stroke-width="4" stroke-linecap="round"><path d="M24 6 L24 16"/><path d="M10 13 L18 20"/><path d="M38 13 L30 20"/><circle cx="24" cy="30" r="10" fill="none"/><circle cx="24" cy="30" r="3.5" fill="#D97757" stroke="none"/></g></svg>
+    <b>gtm-agent</b><span>built with Claude Code &#183; LSN Signs</span><em>CRON &#183; DAILY 08:00</em>
+  </div>
+  <div class="nx-stage gt-stage">
+
+    <section class="nx-scene gt-s1 on">
+      <p class="nx-eyebrow">1 &#183; Find new openings</p>
+      <div class="gt-leads">
+        <div class="gt-lead l1"><span class="gt-dot new">NEW</span><b>Marina caf&#233;</b><small>fit-out permit filed</small></div>
+        <div class="gt-lead l2"><span class="gt-dot new">NEW</span><b>Downtown bakery</b><small>hiring baristas</small></div>
+        <div class="gt-lead l3"><span class="gt-dot new">NEW</span><b>JLT juice bar</b><small>fit-out permit filed</small></div>
+        <div class="gt-lead l4"><span class="gt-dot">seen</span><b>Al Quoz roastery</b><small>already in CRM</small></div>
+      </div>
+      <div class="gt-scan"><span></span>scanning Dubai F&amp;B permits + hiring posts</div>
+    </section>
+
+    <section class="nx-scene gt-s2">
+      <p class="nx-eyebrow">2 &#183; Research + score the fit</p>
+      <div class="gt-card">
+        <div class="gt-card-h"><b>Marina caf&#233;</b><span class="gt-badge">grade A</span></div>
+        <ul><li>signage need: high &#8212; new fit-out</li><li>contact: owner reachable</li><li>competitor signs nearby: none</li></ul>
+      </div>
+      <div class="gt-ring"><svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="50"/><circle class="ring-fg" cx="60" cy="60" r="50"/><text x="60" y="56" text-anchor="middle" class="ring-num">92</text><text x="60" y="76" text-anchor="middle" class="ring-cap">fit score</text></svg></div>
+      <div class="gt-src"><span>sources: permits &#183; maps &#183; LinkedIn</span></div>
+    </section>
+
+    <section class="nx-scene gt-s3">
+      <p class="nx-eyebrow">3 &#183; Draft in our voice, person gates it</p>
+      <div class="wc-mail gt-mail">
+        <div class="wc-mail-h"><svg class="wf-logo"><use href="#gmail"/></svg><b>Draft to owner</b><small>Claude Code writes</small></div>
+        <div class="wc-mail-b"><i></i><i></i><i class="short"></i></div>
+        <span class="wc-mail-tag">tone: LSN voice &#183; references their actual storefront</span>
+      </div>
+      <div class="wc-slack gt-slack">
+        <span class="gt-av">FT</span>
+        <div><b>Fahad approves?</b><small>nothing sends without a yes</small></div>
+        <button class="wc-yes">yes</button>
+      </div>
+      <div class="wc-sent gt-sent"><span>&#10003;</span> queued to send &#183; 0 auto-sent</div>
+    </section>
+
+  </div>
+  <div class="nx-steps gtsteps">
+    <span class="st on"><i>1</i><em>Find</em><b class="prog"></b></span>
+    <span class="st"><i>2</i><em>Score</em><b class="prog"></b></span>
+    <span class="st"><i>3</i><em>Gate</em><b class="prog"></b></span>
+  </div>
+</div>
           </a>
         </div>
       </article>

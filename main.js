@@ -96,6 +96,26 @@
     wloop();
   }
 
+  /* GTM animation: third window, same engine. */
+  const gtmw = $('.gtmwin');
+  if (gtmw) {
+    const gscenes = $$('.nx-scene', gtmw);
+    const gsteps = $$('.nx-steps .st', gtmw);
+    const gdurs = [4400, 5200, 5600];
+    let gcur = 0;
+    const gSet = (n) => {
+      gscenes.forEach((sc, i) => sc.classList.toggle('on', i === n));
+      gsteps.forEach((st, i) => {
+        st.classList.toggle('on', i === n);
+        if (i === n) st.style.setProperty('--stepdur', gdurs[n] + 'ms');
+      });
+    };
+    gsteps[0].style.setProperty('--stepdur', gdurs[0] + 'ms');
+    if (reduce) { gSet(2); return; }
+    const gloop = () => setTimeout(() => { if (!document.hidden) { gcur = (gcur + 1) % 3; gSet(gcur); } gloop(); }, gdurs[gcur]);
+    gloop();
+  }
+
   /* Nav scroll spy. */
   const spy = $('[data-spy]');
   if (spy) {
