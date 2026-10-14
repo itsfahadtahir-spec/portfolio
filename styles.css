@@ -1526,3 +1526,9 @@ h2{font-weight:700}
 /* align all three project windows: top-aligned, same stage height */
 @media (min-width:900px){.proj-grid{align-items:start}.proj-vis{align-self:start}}
 .nxwin .nx-stage,.gtmwin .nx-stage,.wcawin .nx-stage{min-height:340px}
+
+/* GTM: Claude Code + LSN branding */
+.gtmwin .nx-bar b{color:#D97757}
+.gtmwin .gtmspark{flex:none}
+.nx-bar em.lsn-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #E6E1D9;color:var(--navy-900);font-family:var(--font-sans);font-weight:600;font-style:normal;letter-spacing:0}
+.lsn-mark{font-weight:800;letter-spacing:-0.02em;background:linear-gradient(115deg,#000 55%,#7C5CD6 45%);-webkit-background-clip:text;background-clip:text;color:transparent}
