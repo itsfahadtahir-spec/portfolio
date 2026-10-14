@@ -906,3 +906,17 @@ h2{font-weight:700}
 @media (min-width:600px){
   .cred-bento .cb:not(.cb-champ):not(.cb-navy):not(.cb-tools){grid-column:span 2}
 }
+
+/* AI tile goes champagne so navy stays exclusive to the USD tile */
+.cb-ai{background:var(--champ-100);border-color:var(--champ-300)}
+.cb-ai .cb-cap{color:var(--champ-700)}
+.cb-ai .chips span{background:rgba(255,255,255,.65);border-color:var(--champ-300);color:var(--champ-800)}
+
+/* project visuals come alive: slow drift, pan + zoom on hover */
+.proj-vis,.shot{overflow:hidden}
+.proj-vis img,.shot img{transition:transform 700ms var(--ease-out),filter 700ms;will-change:transform}
+@media (prefers-reduced-motion:no-preference){
+  .proj-vis img,.shot img{animation:visDrift 14s ease-in-out infinite alternate}
+}
+.proj-vis:hover img,.shot:hover img{animation-play-state:paused;transform:scale(1.06) translateY(-2.5%);filter:saturate(1.06)}
+@keyframes visDrift{from{transform:scale(1.015) translateY(0)}to{transform:scale(1.05) translateY(-1.5%)}}
