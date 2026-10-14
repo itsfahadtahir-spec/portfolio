@@ -981,26 +981,10 @@ h2{font-weight:700}
 @keyframes verdictIn{0%,58%{opacity:0;transform:translateY(14px)}70%{opacity:1;transform:none}86%{opacity:1}96%,100%{opacity:0}}
 
 /* --- WCA: forecast draws, gap pulses, draft approval (8s loop) --- */
-.ascene-wca{background:var(--navy-900)}
-.ascene-wca .agrid line{stroke:rgba(255,255,255,.14);stroke-width:1}
-.ascene-wca .agrid .zero{stroke:rgba(255,255,255,.28);stroke-dasharray:4 5}
-.ascene-wca .aline{fill:none;stroke:var(--champ-400);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1100;stroke-dashoffset:1100;animation:lineDraw 8s ease-in-out infinite}
 @keyframes lineDraw{0%{stroke-dashoffset:1100}38%{stroke-dashoffset:0}90%{stroke-dashoffset:0;opacity:1}97%,100%{opacity:0}}
-.ascene-wca .agap circle:first-child{fill:#E8B04B}
-.ascene-wca .aping{fill:none;stroke:#E8B04B;stroke-width:2;transform-origin:310px 210px;animation:aping 8s ease-out infinite}
 @keyframes aping{0%,36%{transform:scale(.6);opacity:0}40%{opacity:.9}60%{transform:scale(2.6);opacity:0}100%{opacity:0}}
-.ascene-wca .agap>circle:first-child{transform-origin:310px 210px;animation:gapDot 8s ease-out infinite}
 @keyframes gapDot{0%,36%{transform:scale(0)}44%{transform:scale(1.2)}50%{transform:scale(1)}90%{opacity:1}97%,100%{opacity:0}}
-.ascene-wca .atag{animation:tagIn 8s ease-out infinite}
-.ascene-wca .atag rect{fill:rgba(232,176,75,.16);stroke:#E8B04B}
-.ascene-wca .atag text{fill:#E8B04B;font-size:12.5px;font-weight:600}
 @keyframes tagIn{0%,44%{opacity:0;transform:translateY(8px)}54%{opacity:1;transform:none}88%{opacity:1}97%,100%{opacity:0}}
-.ascene-wca .adraft{animation:draftIn 8s ease-out infinite}
-.ascene-wca .adraft rect{fill:rgba(255,255,255,.08);stroke:rgba(255,255,255,.22)}
-.ascene-wca .adraft text{fill:var(--navy-100);font-size:14px}
-.ascene-wca .ayes{fill:var(--champ-400)}
-.ascene-wca .ayestick{fill:none;stroke:var(--navy-900);stroke-width:2.4;stroke-linecap:round}
-.ascene-wca .ayes,.ascene-wca .ayestick{transform-origin:508px 305px;animation:yesPop 8s ease-out infinite}
 @keyframes draftIn{0%,60%{opacity:0;transform:translateY(10px)}70%{opacity:1;transform:none}88%{opacity:1}97%,100%{opacity:0}}
 @keyframes yesPop{0%,72%{transform:scale(0)}82%{transform:scale(1.15)}88%{transform:scale(1)}94%{opacity:1}100%{opacity:0}}
 
@@ -1020,7 +1004,6 @@ h2{font-weight:700}
 
 /* scene sizing: WCA compact like Nodes, GTM breathes */
 .shot-panH{aspect-ratio:auto}
-.ascene-wca{max-height:360px}
 .ascene-gtm{padding:var(--space-6) var(--space-5);max-height:340px}
 
 /* featured credential row */
@@ -1075,23 +1058,11 @@ h2{font-weight:700}
 @keyframes ndotGo{0%,46%{fill:var(--navy-300)}52%{fill:var(--champ-500)}90%{opacity:1}98%,100%{opacity:0}}
 
 /* --- WCA n8n canvas (7s loop) --- */
-.ascene-wca .wdots{fill:none}
-.ascene-wca .wedge{fill:none;stroke:#3A3F4D;stroke-width:1.6;stroke-dasharray:5 5}
 
-.ascene-wca .wfont{font-family:var(--font-sans)}
-.ascene-wca .wn{font-size:13px;font-weight:600;fill:#F3F3F1}
-.ascene-wca .ws{font-size:10px;fill:#80858F}
-.ascene-wca .wnode{transform-box:fill-box;transform-origin:center;animation:wpop 7s ease-out infinite}
-.ascene-wca .w2{animation-delay:.9s}.ascene-wca .w3{animation-delay:1.8s}.ascene-wca .w4{animation-delay:3.4s}
-@keyframes wpop{0%,4%{transform:scale(.8);opacity:0}12%{transform:scale(1.04);opacity:1}16%{transform:scale(1)}88%{opacity:1}97%,100%{opacity:0}}
-.ascene-wca .wpulse circle{fill:var(--champ-400);transform:translate(40px,120px)}
-.ascene-wca .wpulse{animation:wpulseGo 7s ease-in-out infinite}
-@keyframes wpulseGo{0%{transform:translate(40px,120px);opacity:0}8%{opacity:1}24%{transform:translate(230px,120px)}42%{transform:translate(390px,120px)}58%{transform:translate(540px,160px)}70%{transform:translate(530px,210px);opacity:1}80%,100%{transform:translate(530px,210px);opacity:0}}
-.ascene-wca .wslack{animation:wslackIn 7s ease-out infinite}
 
-.ascene-wca .wslack .wyes{fill:var(--champ-400);stroke:none}
-.ascene-wca .wy{font-size:10px;font-weight:700;fill:var(--navy-900)}
-@keyframes wslackIn{0%,66%{opacity:0;transform:translateY(10px)}76%{opacity:1;transform:none}88%{opacity:1}97%,100%{opacity:0}}
+
+
+
 /* dotted canvas */
 
 /* --- GTM pipeline (7s loop, roomy) --- */
@@ -1114,7 +1085,6 @@ h2{font-weight:700}
 @keyframes gdraftIn{0%,78%{opacity:0;transform:translateY(10px)}86%{opacity:1;transform:none}94%{opacity:1}100%{opacity:0}}
 
 /* equalize scene heights ~ Nodes */
-.ascene-wca,.ascene-gtm{height:auto}
 @media (prefers-reduced-motion:reduce){.ascene *{animation:none!important}}
 
 /* ====== vignettes v4: mini products in navy frames ====== */
@@ -1159,21 +1129,11 @@ h2{font-weight:700}
 @keyframes nappFade{0%,80%{opacity:.55}86%{opacity:1}90%{opacity:1}98%,100%{opacity:0}}
 
 /* --- WCA frame --- */
-.ascene-wca .wdots-bg{fill:none}
-.ascene-wca .wedge{stroke:#4A5062;stroke-dasharray:5 5;fill:none}
 
-.ascene-wca .wn{font-size:13px;fill:#F3F3F1}
-.ascene-wca .ws{font-size:10px;fill:#80858F}
-.ascene-wca .wpulse{fill:var(--champ-400);animation:wfly 8s ease-in-out infinite}
-@keyframes wfly{0%{cx:160px;cy:150px;opacity:0}8%{opacity:1}22%{cx:245px}40%{cx:335px}56%{cx:420px}70%{cx:500px}80%{cx:555px;cy:190px}88%{cx:555px;opacity:1}96%,100%{cx:555px;opacity:0}}
-.ascene-wca .wnode{transform-box:fill-box;transform-origin:center;animation:wpop 8s ease-out infinite}
-.ascene-wca .w5{animation-delay:.4s}.ascene-wca .w2{animation-delay:1.2s}.ascene-wca .w3{animation-delay:2s}.ascene-wca .w4{animation-delay:3.6s}
-@keyframes wpop{0%,5%{transform:scale(.85);opacity:0}13%{transform:scale(1.05);opacity:1}17%{transform:scale(1)}90%{opacity:1}98%,100%{opacity:0}}
-.ascene-wca .wslack{animation:wslackIn 8s ease-out infinite}
 
-.ascene-wca .wyes{fill:var(--champ-400)}
-.ascene-wca .wy{font-size:10px;font-weight:700;fill:var(--navy-900)}
-@keyframes wslackIn{0%,76%{opacity:0;transform:translateY(8px)}86%{opacity:1;transform:none}90%{opacity:1}98%,100%{opacity:0}}
+
+
+
 
 /* --- GTM frame --- */
 .ascene-gtm .gcap{font-family:var(--font-mono);font-size:9px;letter-spacing:.16em;fill:var(--champ-700)}
@@ -1288,24 +1248,7 @@ h2{font-weight:700}
 @media (prefers-reduced-motion:reduce){.nx-scene{transition:none}.nx-wires .pdrop{display:none}.nx-steps .prog{display:none}}
 
 /* ====== WCA vignette: n8n light canvas ====== */
-.ascene-wca .wedge{fill:none;stroke:#B7BEC9;stroke-width:1.6;stroke-dasharray:4 4}
-.ascene-wca .wnode rect:first-child{fill:#fff;stroke:#D8DCE3;stroke-width:1.4;filter:drop-shadow(0 2px 4px rgba(28,34,51,.08))}
-.ascene-wca .wic{stroke:none}
-.ascene-wca .wic-g{fill:#22A055}
-.ascene-wca .wic-n{fill:#1C2233}
-.ascene-wca .wic-c{fill:#BFA67B}
-.ascene-wca .wic-r{fill:#C0392B}
-.ascene-wca .wic-b{fill:#0891B2}
-.ascene-wca .wic-p{fill:#5B4B8A}
-.ascene-wca .wic-i{fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.ascene-wca .wnode .wnub{fill:#B7BEC9;stroke:#fff;stroke-width:1.4}
-.ascene-wca .wn{font-size:12.5px;fill:var(--navy-800)}
-.ascene-wca .ws{font-size:9.5px;fill:var(--navy-500)}
-.ascene-wca .wpulse{fill:#BFA67B;stroke:#fff;stroke-width:1.5;animation:wfly 8s ease-in-out infinite}
-@keyframes wfly{0%{cx:196px;cy:210px;opacity:0}7%{opacity:1}22%{cx:240px}34%{cx:330px}48%{cx:374px}62%{cx:462px}76%{cx:506px}82%{cx:506px;opacity:1}90%,100%{cx:506px;opacity:0}}
-.ascene-wca .wslack>rect:first-child{fill:#fff;stroke:#D8DCE3;stroke-width:1.4}
-.ascene-wca .wyes{fill:#22A055}
-.ascene-wca .wy{font-size:10px;font-weight:700;fill:#fff}
+
 
 /* center scene-2 numbers under the count */
 .nx-legend{max-width:400px;margin:0 auto 12px}
@@ -1314,3 +1257,27 @@ h2{font-weight:700}
 /* scenes fill the frame edge-to-edge; no inner white frame */
 .proj-vis:has(.ascene), .proj-vis:has(.nxwin){border:0;background:transparent}
 .proj-vis .ascene{display:block;width:100%;height:auto}
+
+/* ====== WCA vignette v3: n8n light canvas, framed ====== */
+.ascene-wca .wtitle{font-family:var(--font-mono);font-size:12px;fill:var(--navy-500);letter-spacing:.04em}
+.ascene-wca .wedge{fill:none;stroke:#B7BEC9;stroke-width:1.6;stroke-dasharray:4 4}
+.ascene-wca .wnode rect:first-child{fill:#fff;stroke:#D8DCE3;stroke-width:1.4}
+.ascene-wca .wic-g{fill:#22A055}
+.ascene-wca .wic-n{fill:#1C2233}
+.ascene-wca .wic-c{fill:#BFA67B}
+.ascene-wca .wic-r{fill:#C0392B}
+.ascene-wca .wic-b{fill:#0891B2}
+.ascene-wca .wic-p{fill:#5B4B8A}
+.ascene-wca .wic-i{fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ascene-wca .wnub{fill:#B7BEC9;stroke:#fff;stroke-width:1.4}
+.ascene-wca .wn{font-size:13px;font-weight:600;fill:var(--navy-800)}
+.ascene-wca .ws{font-size:10px;fill:var(--navy-500)}
+.ascene-wca .wnode{transform-box:fill-box;transform-origin:center;animation:wpop 9s ease-out infinite}
+@keyframes wpop{0%,4%{transform:scale(.85);opacity:0}12%{transform:scale(1.05);opacity:1}16%{transform:scale(1)}92%{opacity:1}98%,100%{opacity:0}}
+.ascene-wca .wpulse{fill:#BFA67B;stroke:#fff;stroke-width:1.5;animation:wfly 9s ease-in-out infinite}
+@keyframes wfly{0%{cx:148px;cy:192px;opacity:0}6%{opacity:1}20%{cx:302px}36%{cx:430px}50%{cx:462px;cy:192px}62%{cx:462px;cy:250px;opacity:1}66%,100%{cx:462px;cy:250px;opacity:0}}
+.ascene-wca .wslack{animation:wslackIn 9s ease-out infinite}
+.ascene-wca .wslack>rect:first-child{fill:#fff;stroke:#D8DCE3;stroke-width:1.4}
+.ascene-wca .wyes{fill:#22A055}
+.ascene-wca .wy{font-size:10px;font-weight:700;fill:#fff}
+@keyframes wslackIn{0%,60%{opacity:0;transform:translateY(8px)}70%{opacity:1;transform:none}92%{opacity:1}98%,100%{opacity:0}}
