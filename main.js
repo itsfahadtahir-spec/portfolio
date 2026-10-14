@@ -50,6 +50,17 @@
     requestAnimationFrame(tick);
   }
 
+  /* Animations start only when the frame scrolls into view. */
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((ents) => {
+    ents.forEach((en) => {
+      if (!en.isIntersecting) return;
+      const w = en.target;
+      w.classList.add('play');
+      if (w.__start) w.__start();
+      io.unobserve(w);
+    });
+  }, { rootMargin: '-5% 0px' }) : { observe: (w) => { w.classList.add('play'); if (w.__start) w.__start(); } };
+
   /* Nodes animation: 3-scene loop in the work-card frame. */
   const nxw = $('#nxwin');
   if (nxw) {
@@ -73,7 +84,8 @@
     steps[0].style.setProperty('--stepdur', durs[0] + 'ms');
     if (reduce) { setScene(2); return; }
     const loop = () => setTimeout(() => { if (!document.hidden) { cur = (cur + 1) % 3; setScene(cur); } loop(); }, durs[cur]);
-    loop();
+    nxw.__start = loop;
+    io.observe(nxw);
   }
 
   /* WCA animation: same 3-scene engine, its own timing. */
@@ -93,7 +105,8 @@
     wsteps[0].style.setProperty('--stepdur', wdurs[0] + 'ms');
     if (reduce) { wSet(2); return; }
     const wloop = () => setTimeout(() => { if (!document.hidden) { wcur = (wcur + 1) % 3; wSet(wcur); } wloop(); }, wdurs[wcur]);
-    wloop();
+    wcaw.__start = wloop;
+    io.observe(wcaw);
   }
 
   /* GTM animation: third window, same engine. */
@@ -113,7 +126,8 @@
     gsteps[0].style.setProperty('--stepdur', gdurs[0] + 'ms');
     if (reduce) { gSet(2); return; }
     const gloop = () => setTimeout(() => { if (!document.hidden) { gcur = (gcur + 1) % 3; gSet(gcur); } gloop(); }, gdurs[gcur]);
-    gloop();
+    gtmw.__start = gloop;
+    io.observe(gtmw);
   }
 
   /* Nav scroll spy. */

@@ -1543,3 +1543,6 @@ h2{font-weight:700}
 .brand-badge svg{width:20px;height:20px;color:#EA4B71}
 .brand-badge span{font-size:11.5px;font-weight:700;color:var(--navy-800);letter-spacing:-0.01em}
 .gt-stage .brand-badge svg{color:#D97757}
+
+/* windows stay static until .play is added on scroll-in */
+.nxwin:not(.play) *{animation-play-state:paused!important}
