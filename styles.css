@@ -797,14 +797,15 @@ h2{font-weight:700}
 .heroG-photo picture{position:absolute;inset:0;display:block}
 .heroG-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 16%;border-radius:var(--radius-lg);transform:scale(1.04);animation:settle 1400ms var(--ease-out) 200ms forwards}
 .heroG-copy{display:grid;align-content:center;gap:var(--space-5)}
-.heroG-copy h1{font-size:clamp(30px,3.4vw,52px)}
-.heroG-facts{list-style:none;display:grid;gap:10px;border-top:1px solid var(--border);padding-top:var(--space-4);margin:0}
+.heroG-copy h1{font-size:clamp(32px,3.7vw,56px)}
+.heroG-copy h1 em{font-style:normal;color:var(--champ-700)}
+.heroG-facts{list-style:none;display:grid;gap:8px;margin:0;padding:0}
 .heroG-facts li{display:flex;justify-content:space-between;align-items:baseline;font-size:var(--text-sm);color:var(--navy-600)}
 .heroG-facts b{font-family:var(--font-mono);color:var(--navy-900);font-weight:600}
-.heroG-doodle{justify-self:end;width:min(300px,62%);opacity:0;animation:fadeUp var(--dur-reveal) var(--ease-out) 700ms forwards}
+.heroG-doodle{justify-self:end;width:min(190px,50%);opacity:0;animation:fadeUp var(--dur-reveal) var(--ease-out) 700ms forwards}
 @media (min-width:900px){
   .heroG-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-8);align-items:center}
-  .heroG-photo{max-width:440px;min-height:0;height:min(62vh,580px)}
+  .heroG-photo{max-width:500px;min-height:0;height:min(70vh,640px)}
 }
 @media (min-width:1140px){
   .heroG-spine{display:block;position:absolute;left:-44px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted)}
@@ -814,7 +815,7 @@ h2{font-weight:700}
 
 
 /* Weather widget, restyled: champagne glass pill pinned to the photo */
-.heroG .wxwidget{position:absolute;left:var(--space-4);bottom:var(--space-4);top:auto;right:auto;z-index:3;width:auto;min-width:150px;padding:9px 14px;border-radius:var(--radius-full);background:rgba(250,246,238,.82);backdrop-filter:blur(12px) saturate(1.15);-webkit-backdrop-filter:blur(12px) saturate(1.15);border:1px solid rgba(214,195,160,.65);box-shadow:0 10px 26px rgba(28,34,51,.22),inset 0 1px 0 rgba(255,255,255,.7)}
+.heroG .wxwidget{position:absolute;right:var(--space-4);top:var(--space-4);left:auto;bottom:auto;z-index:3;width:auto;min-width:150px;padding:9px 14px;border-radius:var(--radius-full);background:rgba(250,246,238,.82);backdrop-filter:blur(12px) saturate(1.15);-webkit-backdrop-filter:blur(12px) saturate(1.15);border:1px solid rgba(214,195,160,.65);box-shadow:0 10px 26px rgba(28,34,51,.22),inset 0 1px 0 rgba(255,255,255,.7)}
 .heroG .wxwidget:hover,.heroG .wxwidget:focus{border-radius:var(--radius-lg)}
 .heroG .wx-fact span{text-align:left}
 
