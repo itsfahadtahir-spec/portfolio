@@ -854,11 +854,11 @@ h2{font-weight:700}
 .cb:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
 .cb-cap{font-family:var(--font-mono);font-size:10px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--navy-600)}
 .cb b{line-height:1.05}
-.cb-champ{grid-column:span 2;background:linear-gradient(150deg,var(--champ-300),var(--champ-400));border-color:var(--champ-400);align-content:end}
+.cb-champ{grid-column:span 2;background:linear-gradient(150deg,var(--champ-100),var(--champ-200));border-color:var(--champ-300);align-content:end}
 .cb-champ .cb-cap{color:var(--champ-900)}
 .cb-champ b{font-size:clamp(56px,6vw,84px);font-weight:700;letter-spacing:-0.04em;color:var(--navy-900)}
-.cb-champ b em{font-style:normal;font-size:.42em;font-weight:600;letter-spacing:-0.02em;margin-left:6px;color:var(--champ-900)}
-.cb-champ .cb-sub{font-size:var(--text-xs);color:var(--champ-900)}
+.cb-champ b em{font-style:normal;font-size:.42em;font-weight:600;letter-spacing:-0.02em;margin-left:6px;color:var(--champ-700)}
+.cb-champ .cb-sub{font-size:var(--text-xs);color:var(--champ-800)}
 .cb-navy{grid-column:span 4;background:var(--navy-900);border-color:var(--navy-800);align-content:end}
 .cb-navy .cb-cap{color:var(--navy-300)}
 .cb-navy b{font-size:clamp(40px,4.4vw,62px);font-weight:700;letter-spacing:-0.04em;color:var(--champ-300)}
