@@ -844,3 +844,6 @@ h2{font-weight:700}
 .cred-row .cred-tech{background:var(--champ-100);border-color:var(--champ-300)}
 .cred-row .cred-tech b{color:var(--champ-800)}
 .cred-row .cred-tech span{color:var(--champ-700)}
+
+/* proj-meta descriptor in body font, not mono */
+.proj-meta .proj-tag{font-family:var(--font-sans);font-size:13px;font-weight:500;letter-spacing:-0.005em;color:var(--navy-600)}
