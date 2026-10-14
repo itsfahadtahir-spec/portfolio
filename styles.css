@@ -1537,3 +1537,9 @@ h2{font-weight:700}
 .gt-card{width:46%;max-width:236px}
 .gt-ring{right:8px;top:54px;width:132px}
 .gt-src{right:8px}
+
+/* in-canvas brand badges */
+.brand-badge{position:absolute;right:16px;bottom:12px;display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #E6E8EE;border-radius:99px;padding:5px 12px 5px 7px;z-index:3;box-shadow:0 1px 3px rgba(28,34,51,.08)}
+.brand-badge svg{width:20px;height:20px;color:#EA4B71}
+.brand-badge span{font-size:11.5px;font-weight:700;color:var(--navy-800);letter-spacing:-0.01em}
+.gt-stage .brand-badge svg{color:#D97757}
