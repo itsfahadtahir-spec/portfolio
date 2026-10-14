@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concept A — Masthead</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../styles.css?v=v6">
+<style>
+  /* Concept A: editorial masthead — headline runs the full width, photo docks into the type. */
+  .cA .hero2{min-height:calc(100svh - 72px);display:grid;align-content:space-between;padding-block:var(--space-6) 0}
+  .cA-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--border-strong);padding-bottom:var(--space-4);gap:var(--space-4)}
+  .cA .eyebrow{color:var(--champ-700);font-weight:600}
+  .cA-top .place{font-family:var(--font-mono);font-size:11px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted)}
+  .cA-mid{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:var(--space-7);align-items:end;padding-block:var(--space-7)}
+  .cA h1{font-size:clamp(38px,5.6vw,84px);line-height:1.02;letter-spacing:-0.04em;color:var(--navy-900);font-weight:600;max-width:16ch}
+  .cA h1 em{font-style:normal;color:var(--champ-700)}
+  .cA-sub{max-width:46ch;display:grid;gap:var(--space-4)}
+  .cA-photo{position:relative;justify-self:end;width:min(30vw,340px);grid-column:2;grid-row:1;margin-bottom:calc(var(--space-6) * -1)}
+  .cA-photo .wall{position:absolute;inset:10% -4% -6% 10%;background:var(--champ-200);border-radius:var(--radius-xl);transform:rotate(-2deg)}
+  .cA-photo img{position:relative;display:block;width:100%;border-radius:var(--radius-lg)}
+  .cA-rail{border-top:1px solid var(--border-strong);display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);padding-block:var(--space-4)}
+  .cA-rail li{display:grid;gap:2px;font-size:var(--text-sm);color:var(--navy-600)}
+  .cA-rail b{font-family:var(--font-mono);font-size:var(--text-lg);color:var(--navy-900);font-weight:600}
+  .cA .wxwidget{position:absolute;left:8px;bottom:8px;z-index:2}
+  @media(max-width:899px){
+    .cA-mid{grid-template-columns:1fr;gap:var(--space-6)}
+    .cA-photo{grid-column:1;grid-row:auto;justify-self:start;width:min(62vw,300px);margin-bottom:0}
+    .cA-rail{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body class="v2 cA">
+<a class="skip" href="#main">Skip to content</a><div class="paper" aria-hidden="true"></div>
+<header class="topbar"><div class="wrap"><nav class="topnav" aria-label="Site">
+  <a class="brand" href="#top"><span class="mono-mark">FT</span><span class="name">Fahad Tahir</span></a>
+  <div class="links"><a href="#work">Work</a><a href="#kit">Skills</a><a href="#experience">Experience</a><a href="#watch">Watch</a><a href="#about">Contact</a></div>
+  <a class="btn btn-primary btn-sm" href="#">Download CV</a>
+</nav></div></header>
+<main id="main">
+<section class="hero2 wrap">
+  <div class="cA-top">
+    <p class="eyebrow">Finance Manager · Accounting and FP&amp;A · Dubai</p>
+    <span class="place">Concept A · Masthead</span>
+  </div>
+  <div class="cA-mid">
+    <h1>I close the books, run the cash forecast, and <em>build the tools</em> that make both faster.</h1>
+    <div class="cA-sub">
+      <p class="lede">10 years in Dubai finance at Canon, Pearl Initiative and LSN Signs. 10 audits closed on time. A 13-week cash forecast our CEO plans around. Commission reporting cut from 30 hours a month to about 3.</p>
+      <div class="cta"><a class="btn btn-primary" href="#">Download CV</a><a class="btn btn-secondary" href="#">See Nodes running live</a></div>
+    </div>
+    <figure class="cA-photo"><span class="wall" aria-hidden="true"></span><img src="../assets/images/fahad-portrait.jpg" alt="Fahad Tahir"></figure>
+  </div>
+  <ul class="cA-rail">
+    <li><b>10</b>audits, all on time</li>
+    <li><b>30 → 3</b>hrs of reporting prep</li>
+    <li><b>IFRS 15</b>project revenue</li>
+  </ul>
+</section>
+<section class="kit" style="padding:var(--space-8) 0;text-align:center;color:var(--text-muted)">— next section starts here —</section>
+</main>
+</body>
+</html>

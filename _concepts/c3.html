@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concept C — Noir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../styles.css?v=v6">
+<style>
+  /* Concept C: noir — full-bleed navy hero, champagne accents, the rest of the page stays light. */
+  .cC .hero2{background:var(--navy-900);color:var(--navy-100);min-height:calc(100svh - 72px);display:grid;align-items:center;position:relative;overflow:hidden}
+  .cC .hero2::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 78% 30%, rgba(230,218,195,.10), transparent 70%)}
+  .cC-grid{position:relative;display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:var(--space-7);align-items:center;padding-block:var(--space-8)}
+  .cC .eyebrow{color:var(--champ-300)}
+  .cC h1{font-size:clamp(38px,4.8vw,72px);line-height:1.03;letter-spacing:-0.04em;color:#fff;font-weight:600;max-width:14ch}
+  .cC h1 em{font-style:normal;color:var(--champ-300)}
+  .cC .lede{color:var(--navy-300);max-width:48ch}
+  .cC .btn-secondary{background:transparent;border-color:rgba(255,255,255,.35);color:var(--navy-100)}
+  .cC .btn-secondary:hover{border-color:var(--champ-300);color:#fff}
+  .cC-photo{position:relative}
+  .cC-photo img{display:block;width:100%;border-radius:var(--radius-lg);box-shadow:0 0 0 1px rgba(255,255,255,.12),0 24px 60px -24px rgba(0,0,0,.7)}
+  .cC-photo figcaption{margin-top:10px;font-family:var(--font-mono);font-size:11px;letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--champ-400);text-align:right}
+  .cC-facts{grid-column:1/-1;list-style:none;display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-6);border-top:1px solid rgba(255,255,255,.14);padding-top:var(--space-4);font-size:var(--text-sm);color:var(--navy-300)}
+  .cC-facts b{font-family:var(--font-mono);color:var(--champ-300);font-weight:600;margin-right:4px}
+  @media(max-width:899px){.cC-grid{grid-template-columns:1fr}.cC-photo{order:-1;width:min(70vw,320px)}}
+</style>
+</head>
+<body class="v2 cC">
+<a class="skip" href="#main">Skip to content</a><div class="paper" aria-hidden="true"></div>
+<header class="topbar"><div class="wrap"><nav class="topnav" aria-label="Site">
+  <a class="brand" href="#top"><span class="mono-mark">FT</span><span class="name">Fahad Tahir</span></a>
+  <div class="links"><a href="#work">Work</a><a href="#kit">Skills</a><a href="#experience">Experience</a><a href="#watch">Watch</a><a href="#about">Contact</a></div>
+  <a class="btn btn-primary btn-sm" href="#">Download CV</a>
+</nav></div></header>
+<main id="main">
+<section class="hero2">
+  <div class="wrap cC-grid">
+    <div style="display:grid;gap:var(--space-5)">
+      <p class="eyebrow">Finance Manager · Accounting and FP&amp;A · Dubai</p>
+      <h1>I close the books, run the cash forecast, and <em>build the tools</em> that make both faster.</h1>
+      <p class="lede">10 years in Dubai finance at Canon, Pearl Initiative and LSN Signs. 10 audits closed on time. A 13-week cash forecast our CEO plans around. Commission reporting cut from 30 hours a month to about 3.</p>
+      <div class="cta"><a class="btn btn-primary" href="#">Download CV</a><a class="btn btn-secondary" href="#">See Nodes running live</a></div>
+    </div>
+    <figure class="cC-photo"><img src="../assets/images/fahad-portrait.jpg" alt="Fahad Tahir"><figcaption>Dubai · Concept C</figcaption></figure>
+    <ul class="cC-facts">
+      <li><b>10</b>audits, all on time</li>
+      <li><b>30 → 3</b>hrs of reporting prep</li>
+      <li><b>IFRS 15</b>project revenue</li>
+    </ul>
+  </div>
+</section>
+<section class="kit" style="padding:var(--space-8) 0;text-align:center;color:var(--text-muted)">— next section starts here —</section>
+</main>
+</body>
+</html>
