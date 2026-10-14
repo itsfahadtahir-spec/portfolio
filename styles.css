@@ -1281,3 +1281,65 @@ h2{font-weight:700}
 .ascene-wca .wyes{fill:#22A055}
 .ascene-wca .wy{font-size:10px;font-weight:700;fill:#fff}
 @keyframes wslackIn{0%,60%{opacity:0;transform:translateY(8px)}70%{opacity:1;transform:none}92%{opacity:1}98%,100%{opacity:0}}
+
+/* ====== WCA vignette v4: n8n canvas window (nxwin twin) ====== */
+.wcawin{display:block}
+.wstage{background:#F7F8FA;border-top:1px solid #E7EAEF;border-bottom:1px solid #E7EAEF}
+.wcanvas{display:block;width:100%;height:auto}
+.wcawin .wfont{font-family:var(--font-sans)}
+.wcawin .wn{font-size:12.5px;font-weight:600;fill:var(--navy-800)}
+.wcawin .ws{font-size:9.5px;fill:var(--navy-500)}
+.wcawin .wy{font-size:10px;font-weight:700;fill:#fff}
+.wcawin .wt{font-family:var(--font-mono);font-size:10.5px;fill:var(--navy-500);letter-spacing:.02em}
+.wcawin .wedge{fill:none;stroke:#B9C0CB;stroke-width:1.7;stroke-dasharray:4 4}
+.wcawin .wnode rect:first-child{fill:#fff;stroke:#DDE1E8;stroke-width:1.4}
+.wcawin .wic-g{fill:#22A055}
+.wcawin .wic-n{fill:#1C2233}
+.wcawin .wic-c{fill:#BFA67B}
+.wcawin .wic-r{fill:#C0392B}
+.wcawin .wic-b{fill:#0891B2}
+.wcawin .wic-p{fill:#5B4B8A}
+.wcawin .wic-i{fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.wcawin .wnub{fill:#B9C0CB;stroke:#fff;stroke-width:1.4}
+.wcawin .wyes{fill:#22A055}
+.wcawin .wstatus rect{fill:#EDF1F5}
+/* timeline: 12s loop. Pull 0-4s, Weigh 4-8s, Draft+gate 8-12s */
+.wcawin .wnode{transform-box:fill-box;transform-origin:center;animation:wpop 12s ease-out infinite}
+.wcawin .w1{animation-delay:0s}
+.wcawin .w5{animation-delay:.4s}
+.wcawin .w2{animation-delay:2s}
+.wcawin .w3{animation-delay:4.6s}
+.wcawin .w4{animation-delay:8.2s}
+.wcawin .w6{animation-delay:9.4s}
+@keyframes wpop{0%,3%{transform:scale(.86);opacity:0}7%{transform:scale(1.04);opacity:1}10%,96%{transform:scale(1);opacity:1}99%,100%{transform:scale(.96);opacity:0}}
+.wcawin .wedge{animation:wedgeIn 12s ease infinite}
+.wcawin .wE1{animation-delay:.8s}
+.wcawin .wE4{animation-delay:1.6s}
+.wcawin .wE2{animation-delay:3.4s}
+.wcawin .wE3{animation-delay:7.4s}
+.wcawin .wE5{animation-delay:9.2s}
+@keyframes wedgeIn{0%,4%{opacity:0}8%,96%{opacity:1}99%,100%{opacity:0}}
+.wcawin .wpulse{fill:#BFA67B;stroke:#fff;stroke-width:1.5}
+.wcawin .p1{animation:wp1 12s ease-in-out infinite}
+.wcawin .p2{animation:wp2 12s ease-in-out infinite}
+.wcawin .p3{animation:wp3 12s ease-in-out infinite}
+@keyframes wp1{0%,8%{cx:108px;cy:120px;opacity:0}10%{opacity:1}14%,19%{cx:262px;cy:120px;opacity:1}23%,100%{cx:262px;cy:120px;opacity:0}}
+@keyframes wp2{0%,30%{cx:296px;cy:120px;opacity:0}33%{opacity:1}38%,44%{cx:390px;cy:120px;opacity:1}48%,100%{cx:390px;cy:120px;opacity:0}}
+@keyframes wp3{0%,62%{cx:390px;cy:120px;opacity:0}64%{opacity:1}70%,76%{cx:424px;cy:120px;opacity:1}78%{cx:452px;cy:152px;opacity:1}82%{cx:452px;cy:196px;opacity:1}88%,100%{cx:452px;cy:196px;opacity:0}}
+.wcawin .wstatus{animation:wstatIn 12s ease infinite}
+@keyframes wstatIn{0%,72%{opacity:0;transform:translateY(6px)}80%,96%{opacity:1;transform:none}99%,100%{opacity:0}}
+.wsteps .st i{display:none}
+.wsteps .st.wst1{animation:wstA 12s linear infinite}
+.wsteps .st.wst2{animation:wstB 12s linear infinite}
+.wsteps .st.wst3{animation:wstC 12s linear infinite}
+.wsteps .st .prog{animation:none}
+@keyframes wstA{0%,32%{color:var(--navy-900)}34%,100%{color:var(--navy-400)}}
+@keyframes wstB{0%,32%{color:var(--navy-400)}34%,66%{color:var(--navy-900)}68%,100%{color:var(--navy-400)}}
+@keyframes wstC{0%,66%{color:var(--navy-400)}68%,96%{color:var(--navy-900)}98%,100%{color:var(--navy-400)}}
+.wsteps .st .prog{transform-origin:left}
+.wst1 .prog{animation:wprogA 12s linear infinite}
+.wst2 .prog{animation:wprogB 12s linear infinite}
+.wst3 .prog{animation:wprogC 12s linear infinite}
+@keyframes wprogA{0%{transform:scaleX(0)}32%,100%{transform:scaleX(1)}}
+@keyframes wprogB{0%,33%{transform:scaleX(0)}66%,100%{transform:scaleX(1)}}
+@keyframes wprogC{0%,67%{transform:scaleX(0)}96%,100%{transform:scaleX(1)}}
