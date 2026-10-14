@@ -945,3 +945,75 @@ h2{font-weight:700}
 .shot picture{position:relative;overflow:hidden;display:block}
 .shot picture img{position:absolute;inset:0;width:100%;height:118%;object-fit:cover;object-position:top}
 .shot-panH picture img{object-position:left top}
+
+/* animated project vignettes */
+.ascene{width:100%;height:auto;display:block}
+.shot picture{display:none}
+.shot-panV,.shot-panH,.shot-drift{aspect-ratio:auto}
+.shot .ascene{position:relative}
+.shot-panV img,.shot-panH img,.shot-drift img{display:none}
+.shot:hover img{transform:none}
+.ascene text{font-family:var(--font-sans);font-size:14px;fill:var(--navy-600)}
+.ascene .albl{font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;fill:var(--navy-400)}
+
+/* --- Nodes: match pairs, flag one, person signs off (7.5s loop) --- */
+.ascene-nodes{background:var(--navy-0)}
+.ascene-nodes .arow rect{fill:var(--navy-0);stroke:var(--navy-300);stroke-width:1.4}
+.ascene-nodes .arow text{fill:var(--navy-700);font-family:var(--font-mono);font-size:11px}
+.ascene-nodes .arow{animation:arowIn .55s var(--ease-out) both}
+.ascene-nodes .arow:nth-of-type(1){animation-delay:.1s}.ascene-nodes .arow:nth-of-type(2){animation-delay:.25s}.ascene-nodes .arow:nth-of-type(3){animation-delay:.4s}.ascene-nodes .arow:nth-of-type(4){animation-delay:.2s}.ascene-nodes .arow:nth-of-type(5){animation-delay:.35s}.ascene-nodes .arow:nth-of-type(6){animation-delay:.5s}
+@keyframes arowIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.ascene-nodes .alink{fill:none;stroke:var(--champ-500);stroke-width:1.6;stroke-dasharray:6 6;stroke-dashoffset:280;animation:linkDraw 7.5s linear infinite}
+.ascene-nodes .l1{animation-delay:.8s}.ascene-nodes .l2{animation-delay:1.4s}.ascene-nodes .l3{animation-delay:2s}
+@keyframes linkDraw{0%{stroke-dashoffset:280;opacity:0}6%{opacity:1}14%{stroke-dashoffset:0;opacity:1}86%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}
+.ascene-nodes .achk circle{fill:var(--champ-400)}
+.ascene-nodes .achk path{fill:none;stroke:var(--navy-0);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.ascene-nodes .achk{transform-origin:320px 75px;animation:chkPop 7.5s ease-out infinite}
+.ascene-nodes .c2{transform-origin:320px 125px;animation-delay:.35s}
+@keyframes chkPop{0%,12%{transform:scale(0);opacity:0}20%{transform:scale(1.15);opacity:1}26%{transform:scale(1)}86%{opacity:1}95%,100%{transform:scale(1);opacity:0}}
+.ascene-nodes .aflag{transform-origin:320px 175px;animation:flagPulse 7.5s ease-out infinite}
+.ascene-nodes .aflag circle{fill:#E8B04B}
+.ascene-nodes .aflag path{stroke:var(--navy-0);stroke-width:2;fill:var(--navy-0)}
+@keyframes flagPulse{0%,34%{transform:scale(0);opacity:0}44%{transform:scale(1.15);opacity:1}52%{transform:scale(1)}58%{transform:scale(1.12)}64%{transform:scale(1)}86%{opacity:1}95%,100%{opacity:0}}
+.ascene-nodes .averdict{animation:verdictIn 7.5s ease-out infinite}
+.ascene-nodes .averdict rect{fill:var(--navy-900)}
+.ascene-nodes .averdict text{fill:var(--champ-300);font-size:15px;font-weight:600}
+@keyframes verdictIn{0%,58%{opacity:0;transform:translateY(14px)}70%{opacity:1;transform:none}86%{opacity:1}96%,100%{opacity:0}}
+
+/* --- WCA: forecast draws, gap pulses, draft approval (8s loop) --- */
+.ascene-wca{background:var(--navy-900)}
+.ascene-wca .agrid line{stroke:rgba(255,255,255,.14);stroke-width:1}
+.ascene-wca .agrid .zero{stroke:rgba(255,255,255,.28);stroke-dasharray:4 5}
+.ascene-wca .aline{fill:none;stroke:var(--champ-400);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1100;stroke-dashoffset:1100;animation:lineDraw 8s ease-in-out infinite}
+@keyframes lineDraw{0%{stroke-dashoffset:1100}38%{stroke-dashoffset:0}90%{stroke-dashoffset:0;opacity:1}97%,100%{opacity:0}}
+.ascene-wca .agap circle:first-child{fill:#E8B04B}
+.ascene-wca .aping{fill:none;stroke:#E8B04B;stroke-width:2;transform-origin:310px 210px;animation:aping 8s ease-out infinite}
+@keyframes aping{0%,36%{transform:scale(.6);opacity:0}40%{opacity:.9}60%{transform:scale(2.6);opacity:0}100%{opacity:0}}
+.ascene-wca .agap>circle:first-child{transform-origin:310px 210px;animation:gapDot 8s ease-out infinite}
+@keyframes gapDot{0%,36%{transform:scale(0)}44%{transform:scale(1.2)}50%{transform:scale(1)}90%{opacity:1}97%,100%{opacity:0}}
+.ascene-wca .atag{animation:tagIn 8s ease-out infinite}
+.ascene-wca .atag rect{fill:rgba(232,176,75,.16);stroke:#E8B04B}
+.ascene-wca .atag text{fill:#E8B04B;font-size:12.5px;font-weight:600}
+@keyframes tagIn{0%,44%{opacity:0;transform:translateY(8px)}54%{opacity:1;transform:none}88%{opacity:1}97%,100%{opacity:0}}
+.ascene-wca .adraft{animation:draftIn 8s ease-out infinite}
+.ascene-wca .adraft rect{fill:rgba(255,255,255,.08);stroke:rgba(255,255,255,.22)}
+.ascene-wca .adraft text{fill:var(--navy-100);font-size:14px}
+.ascene-wca .ayes{fill:var(--champ-400)}
+.ascene-wca .ayestick{fill:none;stroke:var(--navy-900);stroke-width:2.4;stroke-linecap:round}
+.ascene-wca .ayes,.ascene-wca .ayestick{transform-origin:508px 305px;animation:yesPop 8s ease-out infinite}
+@keyframes draftIn{0%,60%{opacity:0;transform:translateY(10px)}70%{opacity:1;transform:none}88%{opacity:1}97%,100%{opacity:0}}
+@keyframes yesPop{0%,72%{transform:scale(0)}82%{transform:scale(1.15)}88%{transform:scale(1)}94%{opacity:1}100%{opacity:0}}
+
+/* --- GTM: pulse travels the pipeline (7s loop) --- */
+.ascene-gtm{background:var(--champ-50)}
+.ascene-gtm .apath{stroke:var(--navy-300);stroke-width:1.6;stroke-dasharray:5 7;animation:apath 7s linear infinite}
+@keyframes apath{to{stroke-dashoffset:-120}}
+.ascene-gtm .anode rect{fill:var(--navy-0);stroke:var(--navy-700);stroke-width:1.6}
+.ascene-gtm .anode path,.ascene-gtm .anode circle{fill:none;stroke:var(--navy-700);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ascene-gtm .anode text{fill:var(--navy-600);font-size:12.5px}
+.ascene-gtm .anode{transform-box:fill-box;transform-origin:center;animation:nodeHit 7s ease-in-out infinite}
+.ascene-gtm .n2{animation-delay:1.5s}.ascene-gtm .n3{animation-delay:3s}.ascene-gtm .n4{animation-delay:4.6s}
+@keyframes nodeHit{0%,82%,100%{transform:scale(1)}4%,8%{transform:scale(1.1)}}
+.ascene-gtm .apulse{fill:var(--champ-500);animation:pulseTravel 7s ease-in-out infinite}
+@keyframes pulseTravel{0%{cx:90px;opacity:0}6%{opacity:1}24%{cx:262px}44%{cx:262px}58%{cx:432px}74%{cx:432px}88%{cx:572px;opacity:1}96%,100%{cx:572px;opacity:0}}
+@media (prefers-reduced-motion:reduce){.ascene *{animation:none!important}}
