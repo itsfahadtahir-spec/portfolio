@@ -1532,3 +1532,8 @@ h2{font-weight:700}
 .gtmwin .gtmspark{flex:none}
 .nx-bar em.lsn-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #E6E1D9;color:var(--navy-900);font-family:var(--font-sans);font-weight:600;font-style:normal;letter-spacing:0}
 .lsn-mark{font-weight:800;letter-spacing:-0.02em;background:linear-gradient(115deg,#000 55%,#7C5CD6 45%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* GTM score scene: guaranteed clearance between card and ring */
+.gt-card{width:46%;max-width:236px}
+.gt-ring{right:8px;top:54px;width:132px}
+.gt-src{right:8px}
