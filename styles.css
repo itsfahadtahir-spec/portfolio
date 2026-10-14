@@ -881,3 +881,10 @@ h2{font-weight:700}
   .cb-champ{grid-column:span 1}
   .cb-navy{grid-column:span 2}
 }
+
+/* bento refinements: brighter navy sub, page-matched employer names, two-part stack rail */
+.cb-navy .cb-sub{color:var(--champ-200)}
+.cb .cb-sm{font-size:var(--text-md);font-weight:600;letter-spacing:-0.01em;color:var(--navy-900)}
+.cb-stack{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.cb-stack div{display:grid;gap:2px}
+@media (max-width:599px){.cb-stack{grid-template-columns:1fr}}

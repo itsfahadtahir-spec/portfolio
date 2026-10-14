@@ -36,16 +36,17 @@
 
   function countUp(el) {
     const to = Number(el.dataset.count);
+    const dec = Number(el.dataset.dec) || 0;
     if (reduce || !Number.isFinite(to)) return;
     const start = performance.now();
     const dur = 900;
     const tick = (t) => {
       const p = Math.min(1, (t - start) / dur);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(to * eased);
+      el.textContent = (to * eased).toFixed(dec);
       if (p < 1) requestAnimationFrame(tick);
     };
-    el.textContent = '0';
+    el.textContent = (0).toFixed(dec);
     requestAnimationFrame(tick);
   }
 
