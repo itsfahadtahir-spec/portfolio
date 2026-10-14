@@ -829,11 +829,8 @@ h2{font-weight:700}
 .proj-compact .proj-copy{max-width:72ch;display:grid;gap:var(--space-3)}
 .proj-compact .proj-copy .cta-row{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-2)}
 
-/* luxury display face: Fraunces for headlines, serif italic accent */
-:root{--font-display:"Fraunces",Georgia,"Times New Roman",serif}
-h1,.sec-head h2,.closing h2,.close2 h2,.cover h1,.v2 h2,.hero h1,.hero2 h1,.heroG-copy h1,.proj-copy h3{font-family:var(--font-display);font-weight:550;letter-spacing:-0.015em}
-.heroG-copy h1 em{font-style:italic}
-.cred-row b{font-family:var(--font-display);font-weight:600;font-size:var(--text-xl);letter-spacing:-0.01em;font-variant-numeric:normal}
+/* cred band: sans figures, calm white tiles */
+.cred-row b{font-family:var(--font-sans);font-weight:600;font-size:var(--text-xl);letter-spacing:-0.02em;font-variant-numeric:normal}
 .cred-row .cred-tech{background:var(--bg-surface);border-color:var(--border)}
-.cred-row .cred-tech b{color:var(--navy-900);font-size:var(--text-md);font-weight:550}
+.cred-row .cred-tech b{color:var(--navy-900);font-size:var(--text-md);font-weight:600;letter-spacing:-0.01em}
 .cred-row .cred-tech span{color:var(--text-secondary)}
