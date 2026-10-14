@@ -1343,3 +1343,9 @@ h2{font-weight:700}
 @keyframes wprogA{0%{transform:scaleX(0)}32%,100%{transform:scaleX(1)}}
 @keyframes wprogB{0%,33%{transform:scaleX(0)}66%,100%{transform:scaleX(1)}}
 @keyframes wprogC{0%,67%{transform:scaleX(0)}96%,100%{transform:scaleX(1)}}
+
+/* WCA v4.1 polish */
+.wcawin .wcan8n{flex:none}
+.wcawin .wsent circle{fill:#22A055;stroke:#fff;stroke-width:2}
+.wcawin .wsent{transform-box:fill-box;transform-origin:center;animation:wsentIn 12s ease-out infinite}
+@keyframes wsentIn{0%,84%{transform:scale(0);opacity:0}88%{transform:scale(1.15);opacity:1}92%,96%{transform:scale(1);opacity:1}99%,100%{opacity:0}}
