@@ -834,3 +834,13 @@ h2{font-weight:700}
 .cred-row .cred-tech{background:var(--bg-surface);border-color:var(--border)}
 .cred-row .cred-tech b{color:var(--navy-900);font-size:var(--text-md);font-weight:600;letter-spacing:-0.01em}
 .cred-row .cred-tech span{color:var(--text-secondary)}
+
+/* cred band v2: warm champagne band, navy figures, gold accents */
+.cred{background:linear-gradient(120deg,var(--champ-50),var(--champ-100) 55%,var(--navy-50));padding-block:var(--space-6)}
+.cred-row li{background:rgba(255,255,255,.72);border-color:rgba(214,195,160,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:var(--space-4) var(--space-4) var(--space-3)}
+.cred-row li::before{height:4px;background:linear-gradient(90deg,var(--champ-400),var(--champ-600))}
+.cred-row b{color:var(--navy-800);font-size:clamp(19px,1.7vw,23px)}
+.cred-row span{color:var(--navy-600)}
+.cred-row .cred-tech{background:var(--champ-100);border-color:var(--champ-300)}
+.cred-row .cred-tech b{color:var(--champ-800)}
+.cred-row .cred-tech span{color:var(--champ-700)}
