@@ -1306,3 +1306,7 @@ h2{font-weight:700}
 .ascene-wca .wslack>rect:first-child{fill:#fff;stroke:#D8DCE3;stroke-width:1.4}
 .ascene-wca .wyes{fill:#22A055}
 .ascene-wca .wy{font-size:10px;font-weight:700;fill:#fff}
+
+/* center scene-2 numbers under the count */
+.nx-legend{max-width:400px;margin:0 auto 12px}
+.nx-legend .num{min-width:34px;text-align:right}
