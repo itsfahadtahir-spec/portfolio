@@ -36,17 +36,98 @@
 
   function countUp(el) {
     const to = Number(el.dataset.count);
+    const dec = Number(el.dataset.dec) || 0;
     if (reduce || !Number.isFinite(to)) return;
     const start = performance.now();
     const dur = 900;
     const tick = (t) => {
       const p = Math.min(1, (t - start) / dur);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(to * eased);
+      el.textContent = (to * eased).toFixed(dec);
       if (p < 1) requestAnimationFrame(tick);
     };
-    el.textContent = '0';
+    el.textContent = (0).toFixed(dec);
     requestAnimationFrame(tick);
+  }
+
+  /* Animations start only when the frame scrolls into view. */
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((ents) => {
+    ents.forEach((en) => {
+      if (!en.isIntersecting) return;
+      const w = en.target;
+      w.classList.add('play');
+      if (w.__start) w.__start();
+      io.unobserve(w);
+    });
+  }, { rootMargin: '-5% 0px' }) : { observe: (w) => { w.classList.add('play'); if (w.__start) w.__start(); } };
+
+  /* Nodes animation: 3-scene loop in the work-card frame. */
+  const nxw = $('#nxwin');
+  if (nxw) {
+    const scenes = $$('.nx-scene', nxw);
+    const steps = $$('.nx-steps .st', nxw);
+    const durs = [4200, 5000, 7500];
+    let cur = 0;
+    const count = $('#nx-count');
+    const setScene = (n) => {
+      scenes.forEach((s, i) => s.classList.toggle('on', i === n));
+      steps.forEach((s, i) => {
+        s.classList.toggle('on', i === n);
+        if (i === n) s.style.setProperty('--stepdur', durs[n] + 'ms');
+      });
+      if (n === 1 && count && !reduce) {
+        const t0 = performance.now();
+        const tk = (t) => { const p = Math.min(1, (t - t0) / 1100); count.textContent = Math.round(1000 * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US'); if (p < 1 && cur === n) requestAnimationFrame(tk); };
+        requestAnimationFrame(tk);
+      }
+    };
+    steps[0].style.setProperty('--stepdur', durs[0] + 'ms');
+    if (reduce) { setScene(2); return; }
+    const loop = () => setTimeout(() => { if (!document.hidden) { cur = (cur + 1) % 3; setScene(cur); } loop(); }, durs[cur]);
+    nxw.__start = loop;
+    io.observe(nxw);
+  }
+
+  /* WCA animation: same 3-scene engine, its own timing. */
+  const wcaw = $('.wcawin');
+  if (wcaw) {
+    const wscenes = $$('.nx-scene', wcaw);
+    const wsteps = $$('.nx-steps .st', wcaw);
+    const wdurs = [4200, 5600, 5600];
+    let wcur = 0;
+    const wSet = (n) => {
+      wscenes.forEach((sc, i) => sc.classList.toggle('on', i === n));
+      wsteps.forEach((st, i) => {
+        st.classList.toggle('on', i === n);
+        if (i === n) st.style.setProperty('--stepdur', wdurs[n] + 'ms');
+      });
+    };
+    wsteps[0].style.setProperty('--stepdur', wdurs[0] + 'ms');
+    if (reduce) { wSet(2); return; }
+    const wloop = () => setTimeout(() => { if (!document.hidden) { wcur = (wcur + 1) % 3; wSet(wcur); } wloop(); }, wdurs[wcur]);
+    wcaw.__start = wloop;
+    io.observe(wcaw);
+  }
+
+  /* GTM animation: third window, same engine. */
+  const gtmw = $('.gtmwin');
+  if (gtmw) {
+    const gscenes = $$('.nx-scene', gtmw);
+    const gsteps = $$('.nx-steps .st', gtmw);
+    const gdurs = [4400, 5200, 5600];
+    let gcur = 0;
+    const gSet = (n) => {
+      gscenes.forEach((sc, i) => sc.classList.toggle('on', i === n));
+      gsteps.forEach((st, i) => {
+        st.classList.toggle('on', i === n);
+        if (i === n) st.style.setProperty('--stepdur', gdurs[n] + 'ms');
+      });
+    };
+    gsteps[0].style.setProperty('--stepdur', gdurs[0] + 'ms');
+    if (reduce) { gSet(2); return; }
+    const gloop = () => setTimeout(() => { if (!document.hidden) { gcur = (gcur + 1) % 3; gSet(gcur); } gloop(); }, gdurs[gcur]);
+    gtmw.__start = gloop;
+    io.observe(gtmw);
   }
 
   /* Nav scroll spy. */
