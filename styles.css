@@ -1518,3 +1518,7 @@ h2{font-weight:700}
 .gt-card{width:56%;max-width:250px}
 .gt-ring{right:14px;top:50px;width:128px}
 .gt-src{right:14px;top:196px;max-width:38%;text-align:right}
+
+/* align all three project windows: top-aligned, same stage height */
+@media (min-width:900px){.proj-grid{align-items:start}.proj-vis{align-self:start}}
+.nxwin .nx-stage,.gtmwin .nx-stage,.wcawin .nx-stage{min-height:340px}
