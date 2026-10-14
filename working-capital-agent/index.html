@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Working Capital Agent · Fahad Tahir</title>
   <meta name="description" content="A one-day n8n and K2 Horizon build that spots a cash shortfall before it happens and waits for a finance manager's approval before acting.">
-  <link rel="canonical" href="https://itsfahadtahir-spec.github.io/portfolio/working-capital-agent/">
+  <link rel="canonical" href="https://fahadtahir.vercel.app/working-capital-agent/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Working Capital Agent · Fahad Tahir">
   <meta property="og:description" content="A one-day n8n and K2 Horizon build that spots a cash shortfall before it happens and waits for a finance manager's approval before acting.">
-  <meta property="og:image" content="https://itsfahadtahir-spec.github.io/portfolio/assets/images/og.jpg">
+  <meta property="og:image" content="https://fahadtahir.vercel.app/assets/images/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="../styles.css?v=v4">
+  <link rel="stylesheet" href="../styles.css?v=v5">
   <script>document.documentElement.classList.remove('no-js')</script>
 </head>
 <body>
@@ -34,8 +34,10 @@
         </a>
         <div class="links">
           <a href="../#work" class="on">Work</a>
+          <a href="../#kit">Skills</a>
           <a href="../#experience">Experience</a>
-          <a href="../#about">About</a>
+          <a href="../#watch">Watch</a>
+          <a href="../#about">Contact</a>
         </div>
         <a class="btn btn-primary btn-sm" href="../assets/cv/fahad-tahir-cv.pdf" download>Download CV</a>
       </nav>
@@ -50,7 +52,7 @@
         <p class="eyebrow fade-up" style="--d:80ms;margin-top:32px">Hackathon build · n8n × K2 Horizon · Dubai, <time>25 Sep 2026</time></p>
         <h1 id="h1" data-split>Working Capital Agent</h1>
         <p class="sub fade-up" style="--d:240ms">It sees a cash shortfall coming, works out how to avoid it, and waits for a finance manager's approval before anything goes out.</p>
-        <p class="outcome fade-up" style="--d:280ms"><b>What it replaces:</b> a week of manual cash forecasting every month, and the calls that find out about a shortfall the day it happens.</p>
+        <p class="outcome fade-up" style="--d:280ms"><b>What it automates:</b> the data pull, the sums and the first draft of the cash forecast I build by hand at LSN.</p>
         <dl class="details fade-up" style="--d:320ms">
           <div><dt>Built in</dt><dd>One day</dd></div>
           <div><dt>Tools</dt><dd>n8n, K2 Horizon, Google Sheets, Slack, Gmail</dd></div>
@@ -112,7 +114,7 @@
           </div>
           <div class="rv" data-view style="--d:80ms">
             <div class="chart" data-chart>
-              <p class="src">Two confirmed points, 25 Sep and 30 Sep, and the safety line. Pick an option below to redraw the lowest point.</p>
+              <p class="src">Two confirmed points, 25 Sep and 30 Sep, and the safety line. Sample company, sample data. Pick an option below to redraw the lowest point.</p>
             </div>
             <p class="sr-only" data-chart-live aria-live="polite"></p>
           </div>
@@ -152,7 +154,7 @@
             <h3>Do nothing</h3>
             <span class="chg">Nothing</span>
             <span class="low">AED 55k</span>
-            <span class="lowlbl">Lowest cash in 30 days</span>
+            <span class="lowlbl">Cash on 30 Sep</span>
             <span class="res"><i aria-hidden="true"></i>Drops below the line</span>
           </button>
           <button class="opt ok" type="button" aria-pressed="false" data-low="92">
@@ -160,7 +162,7 @@
             <h3>Chase Bluewave early</h3>
             <span class="chg">Collect <span class="num">AED 37k</span> sooner</span>
             <span class="low">AED 92k</span>
-            <span class="lowlbl">Lowest cash in 30 days</span>
+            <span class="lowlbl">Cash on 30 Sep</span>
             <span class="res"><i aria-hidden="true"></i>Stays above the line</span>
           </button>
           <button class="opt ok" type="button" aria-pressed="false" data-low="95">
@@ -168,7 +170,15 @@
             <h3>Delay Supplier Alpha</h3>
             <span class="chg">Pay <span class="num">AED 40k</span> seven days later</span>
             <span class="low">AED 95k</span>
-            <span class="lowlbl">Lowest cash in 30 days</span>
+            <span class="lowlbl">Cash on 30 Sep</span>
+            <span class="res"><i aria-hidden="true"></i>Stays above the line</span>
+          </button>
+          <button class="opt ok" type="button" aria-pressed="false" data-low="132">
+            <span class="k">Option</span>
+            <h3>Do both</h3>
+            <span class="chg">Collect <span class="num">AED 37k</span> sooner and pay <span class="num">AED 40k</span> later</span>
+            <span class="low">AED 132k</span>
+            <span class="lowlbl">Cash on 30 Sep</span>
             <span class="res"><i aria-hidden="true"></i>Stays above the line</span>
           </button>
         </div>
@@ -194,7 +204,7 @@
             <p>Cash is forecast to drop below your <span class="num">AED 75k</span> safety line on <time>30 Sep</time>.</p>
             <div class="kv">
               <div><span>Lowest point if nothing changes:</span> AED 55k</div>
-              <div><span>Result:</span> no breach in the next 30 days</div>
+              <div><span>Recommended:</span> chase Bluewave early, collect AED 37k sooner</div>
             </div>
             <div class="acts"><span class="btn btn-primary btn-sm" aria-hidden="true">Approve</span><span class="btn btn-secondary btn-sm" aria-hidden="true">Review analysis</span></div>
           </div>
@@ -281,7 +291,7 @@
           <h2 id="why-h">The forecast I already build, with the slow parts automated.</h2>
         </div>
         <div class="prose rv" data-view>
-          <p>This is the same rolling cash forecast I keep for LSN's CEO. I handed the workflow the parts I'd give a good analyst: pulling the data, doing the sums and drafting the email. The decision stayed with a person, which is where it belongs.</p>
+          <p>This is the same kind of rolling cash forecast I keep for LSN's CEO, built on sample data, not LSN's. I handed the workflow the parts I'd give a good analyst: pulling the data, doing the sums and drafting the email. The decision stayed with a person, which is where it belongs.</p>
         </div>
       </div>
     </section>
@@ -321,7 +331,7 @@
               <a class="btn btn-primary" href="../assets/cv/fahad-tahir-cv.pdf" download data-magnet>Download CV</a>
               <button class="btn btn-ghost" type="button" data-copy="itsfahadtahir@gmail.com">Copy email</button>
             </div>
-            <span class="email">itsfahadtahir@gmail.com</span>
+            <a class="link email" href="mailto:itsfahadtahir@gmail.com">itsfahadtahir@gmail.com</a> · <a class="link" href="https://www.linkedin.com/in/fahadtahiruae/" target="_blank" rel="noopener" style="font-size:14px">LinkedIn</a>
           </div>
         </div>
         <p style="margin-top:24px"><a class="back" href="../#work" style="font-size:14px;color:var(--text-secondary);text-decoration:none"><span aria-hidden="true">←</span> Back to all work</a></p>
@@ -341,6 +351,6 @@
   </footer>
 
   <div class="toast" role="status" aria-live="polite"><i aria-hidden="true"></i><span></span></div>
-  <script src="../main.js?v=v4" defer></script>
+  <script src="../main.js?v=v5" defer></script>
 </body>
 </html>
