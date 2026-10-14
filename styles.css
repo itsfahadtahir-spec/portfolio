@@ -1310,3 +1310,7 @@ h2{font-weight:700}
 /* center scene-2 numbers under the count */
 .nx-legend{max-width:400px;margin:0 auto 12px}
 .nx-legend .num{min-width:34px;text-align:right}
+
+/* scenes fill the frame edge-to-edge; no inner white frame */
+.proj-vis:has(.ascene), .proj-vis:has(.nxwin){border:0;background:transparent}
+.proj-vis .ascene{display:block;width:100%;height:auto}
