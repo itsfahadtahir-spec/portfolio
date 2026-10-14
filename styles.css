@@ -1117,3 +1117,92 @@ h2{font-weight:700}
 /* equalize scene heights ~ Nodes */
 .ascene-wca,.ascene-gtm{height:auto}
 @media (prefers-reduced-motion:reduce){.ascene *{animation:none!important}}
+
+/* ====== vignettes v4: mini products in navy frames ====== */
+.ascene-nodes .nlogo{font-size:15px;font-weight:700;fill:var(--navy-900)}
+.ascene-nodes .nmenu{font-size:10px;fill:var(--navy-500)}
+.ascene-nodes .nws{font-size:10px;font-weight:600;fill:var(--champ-300)}
+.ascene-nodes .neye{font-family:var(--font-mono);font-size:8.5px;letter-spacing:.16em;fill:var(--navy-400)}
+.ascene-nodes .nhd{font-size:34px;font-weight:700;letter-spacing:-0.02em;fill:var(--navy-900)}
+.ascene-nodes .nhd2{font-size:34px;font-weight:700;letter-spacing:-0.02em;fill:var(--champ-700)}
+.ascene-nodes .nsub{font-size:12.5px;fill:var(--navy-600)}
+.ascene-nodes .ncta{font-size:11.5px;font-weight:600;fill:#fff}
+.ascene-nodes .lhero,.ascene-nodes .lnav{animation:lIn 9s ease-out infinite}
+@keyframes lIn{0%{opacity:0;transform:translateY(10px)}5%{opacity:1;transform:none}92%{opacity:1}99%,100%{opacity:0}}
+.ascene-nodes .ncard{animation:ncardIn 9s ease-out infinite}
+@keyframes ncardIn{0%,6%{opacity:0;transform:translateY(18px)}14%{opacity:1;transform:none}92%{opacity:1}99%,100%{opacity:0}}
+.ascene-nodes .nfile{animation:ndrop 9s ease-in-out infinite}
+.ascene-nodes .ndot{animation:ndotGo 9s ease-in-out infinite}
+.ascene-nodes .nprog{animation:nprogIn 9s linear infinite}
+.ascene-nodes .nprog .nfill{animation:nfill 9s ease-in-out infinite}
+.ascene-nodes .ncase{animation:ncaseIn 9s ease-out infinite}
+.ascene-nodes .nchips{animation:nchipsIn 9s ease-out infinite}
+.ascene-nodes .ncase>rect{stroke:var(--champ-400);fill:#FFF}
+.ascene-nodes .ncase .nc{fill:#C08A2E}
+.ascene-nodes .ncase .nskel{fill:var(--navy-200)}
+.ascene-nodes .napp rect{fill:var(--navy-900)}
+.ascene-nodes .napp .na{fill:var(--champ-300)}
+.ascene-nodes .nchips rect{fill:#fff;stroke:var(--navy-200)}
+.ascene-nodes .nchips .nch{fill:var(--navy-600)}
+.ascene-nodes .nfont{letter-spacing:0}
+.ascene-nodes .nm{font-size:10px}
+.ascene-nodes .fn{font-size:11px}
+.ascene-nodes .fs{font-size:9.5px}
+.ascene-nodes .na{font-size:10px}
+.ascene-nodes .nch{font-size:8.5px}
+@keyframes nfill{0%,30%{width:0}58%{width:236px}92%{opacity:1}99%,100%{opacity:0}}
+@keyframes nprogIn{0%,26%{opacity:0}32%{opacity:1}92%{opacity:1}99%,100%{opacity:0}}
+@keyframes ndrop{0%,10%{opacity:0;transform:translateY(-10px)}16%{opacity:1;transform:none}92%{opacity:1}99%,100%{opacity:0}}
+@keyframes ncaseIn{0%,60%{opacity:0;transform:translateY(8px)}70%{opacity:1;transform:none}90%{opacity:1}98%,100%{opacity:0}}
+@keyframes nchipsIn{0%,76%{opacity:0}84%{opacity:1}90%{opacity:1}98%,100%{opacity:0}}
+@keyframes ndotGo{0%,62%{fill:var(--navy-300)}68%{fill:var(--champ-500)}92%{opacity:1}99%,100%{opacity:0}}
+.ascene-nodes .napp{animation:nappFade 9s ease-out infinite}
+@keyframes nappFade{0%,80%{opacity:.55}86%{opacity:1}90%{opacity:1}98%,100%{opacity:0}}
+
+/* --- WCA frame --- */
+.ascene-wca .wdots-bg{fill:none}
+.ascene-wca .wedge{stroke:#4A5062;stroke-dasharray:5 5;fill:none}
+.ascene-wca .wnode rect{fill:#262933;stroke:#3D4250}
+.ascene-wca .wn{font-size:13px;fill:#F3F3F1}
+.ascene-wca .ws{font-size:10px;fill:#80858F}
+.ascene-wca .wpulse{fill:var(--champ-400);animation:wfly 8s ease-in-out infinite}
+@keyframes wfly{0%{cx:160px;cy:150px;opacity:0}8%{opacity:1}22%{cx:245px}40%{cx:335px}56%{cx:420px}70%{cx:500px}80%{cx:555px;cy:190px}88%{cx:555px;opacity:1}96%,100%{cx:555px;opacity:0}}
+.ascene-wca .wnode{transform-box:fill-box;transform-origin:center;animation:wpop 8s ease-out infinite}
+.ascene-wca .w5{animation-delay:.4s}.ascene-wca .w2{animation-delay:1.2s}.ascene-wca .w3{animation-delay:2s}.ascene-wca .w4{animation-delay:3.6s}
+@keyframes wpop{0%,5%{transform:scale(.85);opacity:0}13%{transform:scale(1.05);opacity:1}17%{transform:scale(1)}90%{opacity:1}98%,100%{opacity:0}}
+.ascene-wca .wslack{animation:wslackIn 8s ease-out infinite}
+.ascene-wca .wslack>rect{fill:#2A2D38;stroke:#3D4250}
+.ascene-wca .wyes{fill:var(--champ-400)}
+.ascene-wca .wy{font-size:10px;font-weight:700;fill:var(--navy-900)}
+@keyframes wslackIn{0%,76%{opacity:0;transform:translateY(8px)}86%{opacity:1;transform:none}90%{opacity:1}98%,100%{opacity:0}}
+.ascene-wca rect[width="608"]{fill:#17181D}
+
+/* --- GTM frame --- */
+.ascene-gtm .gcap{font-family:var(--font-mono);font-size:9px;letter-spacing:.16em;fill:var(--champ-700)}
+.ascene-gtm .gpath{stroke:var(--navy-300);stroke-width:1.5;stroke-dasharray:5 7;animation:gpath 8s linear infinite}
+@keyframes gpath{to{stroke-dashoffset:-120}}
+.ascene-gtm .gnode rect{fill:#fff;stroke:var(--navy-700);stroke-width:1.6}
+.ascene-gtm .gnode path,.ascene-gtm .gnode circle{fill:none;stroke:var(--navy-700);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ascene-gtm .gfont{font-family:var(--font-sans)}
+.ascene-gtm .gnode text{font-size:13px;font-weight:600;fill:var(--navy-700)}
+.ascene-gtm .gnode{transform-box:fill-box;transform-origin:center;animation:ghit 8s ease-in-out infinite}
+.ascene-gtm .g2{animation-delay:1.9s}.ascene-gtm .g3{animation-delay:3.7s}.ascene-gtm .g4{animation-delay:5.4s}
+@keyframes ghit{0%,88%,100%{transform:scale(1)}4%,9%{transform:scale(1.06)}}
+.ascene-gtm .gl{font-size:11.5px;font-weight:600;fill:var(--navy-800)}
+.ascene-gtm .gs{font-size:10px;fill:var(--navy-500)}
+.ascene-gtm .glead{animation:glead 8s ease-in-out infinite}
+.ascene-gtm .glead rect{fill:#fff;stroke:var(--champ-500);stroke-width:1.6}
+@keyframes glead{0%{opacity:0;transform:translate(0,14px)}8%{opacity:1;transform:none}18%{transform:translate(160px,0)}36%{transform:translate(160px,0)}50%{transform:translate(320px,0)}66%{transform:translate(320px,0)}80%{transform:translate(460px,0);opacity:1}92%,100%{transform:translate(460px,0);opacity:0}}
+.ascene-gtm .gscore{animation:gscoreIn 8s ease-out infinite}
+.ascene-gtm .gscore rect{fill:var(--navy-900)}
+.ascene-gtm .gsc{font-size:10px;font-weight:700;fill:var(--champ-300)}
+@keyframes gscoreIn{0%,24%{opacity:0;transform:translateY(8px)}32%{opacity:1;transform:none}84%{opacity:1}94%,100%{opacity:0}}
+.ascene-gtm .gmsg{animation:gmsgIn 8s ease-out infinite}
+.ascene-gtm .gmsg rect{fill:#fff;stroke:var(--champ-400)}
+.ascene-gtm .gm{font-size:13.5px;font-weight:700;fill:var(--navy-900)}
+.ascene-gtm .na{font-size:10.5px;font-weight:600;fill:#fff}
+@keyframes gmsgIn{0%,80%{opacity:0;transform:translateY(12px)}90%{opacity:1;transform:none}95%{opacity:1}100%{opacity:0}}
+.ascene-gtm .gpulse{fill:var(--champ-500);animation:gpulse 8s ease-in-out infinite}
+@keyframes gpulse{0%{cx:130px;cy:210px;opacity:0}5%{opacity:1}18%{cx:290px}34%{cx:290px}50%{cx:450px}64%{cx:450px}78%{cx:585px;opacity:1}88%,100%{cx:585px;opacity:0}}
+
+@media (prefers-reduced-motion:reduce){.ascene *{animation:none!important}}
