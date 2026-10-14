@@ -1393,18 +1393,22 @@ h2{font-weight:700}
 @keyframes wchipIn{0%,56%{opacity:0;transform:translateY(6px)}64%,94%{opacity:1;transform:none}98%,100%{opacity:0}}
 /* scene 2 */
 .wc-chart{position:absolute;left:18px;top:46px;width:290px;background:#fff;border:1px solid #DDE1E8;border-radius:12px;padding:12px}
+.nx-scene.on .wc-chart{animation:wchartOut 5.6s ease forwards}
+@keyframes wchartOut{0%,86%{opacity:1}96%,100%{opacity:0}}
 .wc-ct{display:block;font-family:var(--font-mono);font-size:9.5px;color:var(--navy-500);letter-spacing:.05em;margin-bottom:6px}
 .wc-axis{fill:none;stroke:#E3E6EB;stroke-width:1.4}
+.nx-scene.on .wc-axis{animation:waxisOut 5.6s ease forwards}
+@keyframes waxisOut{0%,86%{opacity:1}96%,100%{opacity:0}}
 .nx-scene.on .wc-line{fill:none;stroke:#1C2233;stroke-width:2;stroke-dasharray:420;stroke-dashoffset:420;animation:wline 5.6s ease-out infinite}
-@keyframes wline{0%,8%{stroke-dashoffset:420}42%,96%{stroke-dashoffset:0}99%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes wline{0%,8%{stroke-dashoffset:420;opacity:1}42%,86%{stroke-dashoffset:0;opacity:1}94%,100%{stroke-dashoffset:0;opacity:0}}
 .nx-scene.on .wc-gap{stroke:#C0392B;stroke-width:1.4;stroke-dasharray:3 3;animation:wgapln 5.6s ease-out infinite}
-@keyframes wgapln{0%,48%{opacity:0}56%,96%{opacity:1}99%,100%{opacity:0}}
+@keyframes wgapln{0%,48%{opacity:0}56%,86%{opacity:1}94%,100%{opacity:0}}
 .nx-scene.on .wc-gapmark{animation:wgapmk 5.6s ease-out infinite}
 .wc-gapmark circle{fill:#C0392B}
 .wc-gapmark text{font-size:9.5px;fill:#C0392B;font-weight:700;font-family:var(--font-sans)}
-@keyframes wgapmk{0%,50%{opacity:0;transform:translateY(4px)}58%,96%{opacity:1;transform:none}99%,100%{opacity:0}}
+@keyframes wgapmk{0%,50%{opacity:0;transform:translateY(4px)}58%,86%{opacity:1;transform:none}94%,100%{opacity:0;transform:translateY(-3px)}}
 .wc-hub.h-ai{top:52px;width:118px;padding:10px;animation:whubIn2 5.6s ease-out infinite}
-@keyframes whubIn2{0%,52%{opacity:0;transform:scale(.9)}60%{transform:scale(1.04);opacity:1}66%,96%{transform:scale(1);opacity:1}99%,100%{opacity:0}}
+@keyframes whubIn2{0%,52%{opacity:0;transform:scale(.9)}60%{transform:scale(1.04);opacity:1}66%,86%{transform:scale(1);opacity:1}94%,100%{opacity:0;transform:scale(.98)}}
 .nx-scene.on .wc-wires.w2 .wr5{animation:wline2 5.6s ease-out infinite;stroke-dasharray:60;stroke-dashoffset:60}
 @keyframes wline2{0%,44%{stroke-dashoffset:60;opacity:0}50%{opacity:1}58%,96%{stroke-dashoffset:0;opacity:1}99%,100%{opacity:0}}
 .nx-scene.on .wc-wires.w2 .p5{animation:wtr5 5.6s ease-in-out infinite}
@@ -1416,7 +1420,7 @@ h2{font-weight:700}
 .nx-scene.on .wc-opt.o1{animation-delay:.12s;border-color:#22A055;border-width:1.6px}
 .nx-scene.on .wc-opt.o2{animation-delay:.24s}
 .nx-scene.on .wc-opt.veto{opacity:.55;text-decoration:line-through;text-decoration-color:rgba(192,57,43,.6);animation-delay:.36s}
-@keyframes woptIn{0%,68%{opacity:0;transform:translateY(8px)}76%,96%{opacity:1;transform:none}99%,100%{opacity:0}}
+@keyframes woptIn{0%,68%{opacity:0;transform:translateY(8px)}76%,86%{opacity:1;transform:none}94%,100%{opacity:0;transform:translateY(-4px)}}
 /* scene 3 */
 .nx-scene.on .wc-mail{position:absolute;left:50%;top:38px;transform:translateX(-50%);width:300px;background:#fff;border:1px solid #DDE1E8;border-radius:12px;padding:12px;animation:wmailIn 5.6s ease-out infinite}
 @keyframes wmailIn{0%,4%{opacity:0;transform:translateX(-50%) translateY(-10px)}12%,96%{opacity:1;transform:translateX(-50%)}99%,100%{opacity:0}}
