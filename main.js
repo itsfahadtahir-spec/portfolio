@@ -76,6 +76,26 @@
     loop();
   }
 
+  /* WCA animation: same 3-scene engine, its own timing. */
+  const wcaw = $('.wcawin');
+  if (wcaw) {
+    const wscenes = $$('.nx-scene', wcaw);
+    const wsteps = $$('.nx-steps .st', wcaw);
+    const wdurs = [4200, 5600, 5600];
+    let wcur = 0;
+    const wSet = (n) => {
+      wscenes.forEach((sc, i) => sc.classList.toggle('on', i === n));
+      wsteps.forEach((st, i) => {
+        st.classList.toggle('on', i === n);
+        if (i === n) st.style.setProperty('--stepdur', wdurs[n] + 'ms');
+      });
+    };
+    wsteps[0].style.setProperty('--stepdur', wdurs[0] + 'ms');
+    if (reduce) { wSet(2); return; }
+    const wloop = () => setTimeout(() => { if (!document.hidden) { wcur = (wcur + 1) % 3; wSet(wcur); } wloop(); }, wdurs[wcur]);
+    wloop();
+  }
+
   /* Nav scroll spy. */
   const spy = $('[data-spy]');
   if (spy) {
