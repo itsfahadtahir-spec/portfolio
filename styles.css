@@ -888,3 +888,21 @@ h2{font-weight:700}
 .cb-stack{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
 .cb-stack div{display:grid;gap:2px}
 @media (max-width:599px){.cb-stack{grid-template-columns:1fr}}
+
+/* compact card gets a right-hand visual like the other projects */
+@media (min-width:900px){.proj-compact .proj-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--space-7)}}
+
+/* stack rail -> two chip tiles */
+.cb-tools{grid-column:span 3;background:rgba(255,255,255,.8);align-content:start;gap:10px}
+.cb-tools .cb-cap{color:var(--navy-600)}
+.cb-tools .chips{display:flex;flex-wrap:wrap;gap:8px}
+.cb-tools .chips span{font-size:12px;font-weight:600;letter-spacing:-0.005em;padding:5px 10px;border-radius:999px;border:1px solid var(--navy-200);background:var(--navy-0);color:var(--navy-800)}
+.cb-ai{background:var(--navy-900);border-color:var(--navy-800)}
+.cb-ai .cb-cap{color:var(--navy-300)}
+.cb-ai .chips span{background:rgba(214,195,160,.12);border-color:rgba(214,195,160,.35);color:var(--champ-300)}
+@media (max-width:599px){.cb-tools{grid-column:1/-1}}
+
+/* bento rows: employers 3x2, tools 3+3 on their own row */
+@media (min-width:600px){
+  .cred-bento .cb:not(.cb-champ):not(.cb-navy):not(.cb-tools){grid-column:span 2}
+}
