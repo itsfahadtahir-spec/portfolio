@@ -51,13 +51,13 @@
   }
 
   /* Animations start only when the frame scrolls into view. */
-  const io = 'IntersectionObserver' in window ? new IntersectionObserver((ents) => {
+  const animIO = 'IntersectionObserver' in window ? new IntersectionObserver((ents) => {
     ents.forEach((en) => {
       if (!en.isIntersecting) return;
       const w = en.target;
       w.classList.add('play');
       if (w.__start) w.__start();
-      io.unobserve(w);
+      animIO.unobserve(w);
     });
   }, { rootMargin: '-5% 0px' }) : { observe: (w) => { w.classList.add('play'); if (w.__start) w.__start(); } };
 
@@ -85,7 +85,7 @@
     if (reduce) { setScene(2); return; }
     const loop = () => setTimeout(() => { if (!document.hidden) { cur = (cur + 1) % 3; setScene(cur); } loop(); }, durs[cur]);
     nxw.__start = loop;
-    io.observe(nxw);
+    animIO.observe(nxw);
   }
 
   /* WCA animation: same 3-scene engine, its own timing. */
@@ -106,7 +106,7 @@
     if (reduce) { wSet(2); return; }
     const wloop = () => setTimeout(() => { if (!document.hidden) { wcur = (wcur + 1) % 3; wSet(wcur); } wloop(); }, wdurs[wcur]);
     wcaw.__start = wloop;
-    io.observe(wcaw);
+    animIO.observe(wcaw);
   }
 
   /* GTM animation: third window, same engine. */
@@ -127,7 +127,7 @@
     if (reduce) { gSet(2); return; }
     const gloop = () => setTimeout(() => { if (!document.hidden) { gcur = (gcur + 1) % 3; gSet(gcur); } gloop(); }, gdurs[gcur]);
     gtmw.__start = gloop;
-    io.observe(gtmw);
+    animIO.observe(gtmw);
   }
 
   /* Nav scroll spy. */
@@ -299,7 +299,7 @@
     const cio = new IntersectionObserver((es) => {
       es.forEach((e) => { if (e.isIntersecting) { chart.classList.add('in-view'); cio.disconnect(); } });
     }, { threshold: 0.4 });
-    cio.observe(chart);
+    canimIO.observe(chart);
 
     const opts = $$('.opt');
     opts.forEach((b) =>
