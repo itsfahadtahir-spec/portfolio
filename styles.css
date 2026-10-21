@@ -634,7 +634,7 @@ h2{font-weight:700}
 .bnum span:last-child{max-width:30ch}
 .watch{padding-block:var(--space-8)}
 .vids{list-style:none;display:grid;gap:var(--space-5);margin-top:var(--space-7)}
-@media (min-width:700px){.vids{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:700px){.vids{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .vid h3{font-size:var(--text-lg);font-weight:700;letter-spacing:-0.01em;margin-top:var(--space-3)}
 .vid p{margin-top:6px;font-size:var(--text-sm);color:var(--text-secondary)}
 .vthumb{position:relative;aspect-ratio:16/9;border-radius:var(--radius-lg);display:grid;place-items:center;overflow:hidden;background:linear-gradient(140deg,var(--navy-800),var(--navy-900) 55%,#22202a)}
